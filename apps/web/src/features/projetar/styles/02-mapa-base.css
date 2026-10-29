@@ -1,0 +1,96 @@
+.hud {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background: radial-gradient(
+    110% 90% at 55% 50%,
+    #101114,
+    #08090a 58%,
+    #050607
+  );
+}
+.hud canvas.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  touch-action: none;
+}
+.mapzoom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.zoomctl {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-100%, -100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 100px;
+  background: #141516e0;
+  border: 1px solid var(--line);
+}
+.zoomctl button {
+  all: unset;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  color: var(--fg-2);
+  transition:
+    background-color var(--hover) var(--ease),
+    color var(--hover) var(--ease);
+}
+.zoomctl button:hover {
+  background: var(--panel-3);
+  color: var(--fg);
+}
+.zoomctl button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 1px;
+}
+.zoomctl button[disabled] {
+  color: var(--fg-4);
+  cursor: default;
+  background: none;
+}
+.zoomctl.touch {
+  flex-direction: row;
+}
+.zoomctl.touch button {
+  width: 44px;
+  height: 44px;
+}
+.hud:not(.phone):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 132px;
+  background: linear-gradient(#08090a 35%, #08090a00);
+  z-index: 2;
+  pointer-events: none;
+}
+.hud canvas.prev,
+.hud canvas.hov,
+.hud canvas.fx {
+  pointer-events: none;
+}
+.hud canvas.prev {
+  transition: opacity 0.45s var(--ease);
+}
+
+@media (pointer: coarse) {
+  .zoomctl button {
+    width: 44px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "apurar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@12.2.1",
+  "engines": {
+    "node": ">=24.22.1 <25",
+    "npm": ">=12.2.1 <13"
+  },
+  "scripts": {
+    "prepare": "lefthook install",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "npm run check:deps && npm run check:licenses && npm run check:imports && npm run check:geography && npm run check:limits && npm run lint && npm run typecheck && npm run format:check && npm run test:quality && npm test && npm run test:collector",
+    "check:all": "npm run check && npm run build",
+    "check:ci-local": "npm run check:all && npm run test:browser",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:limits": "node scripts/quality/check-limits.mjs",
+    "test": "vitest run --config vitest.config.ts",
+    "test:browser": "playwright test",
+    "check:deps": "node scripts/quality/check-deps.mjs",
+    "check:licenses": "node scripts/quality/check-licenses.mjs",
+    "test:quality": "node --test scripts/quality/*.test.mjs",
+    "test:collector": "python3 -B services/collector/check.py",
+    "check:imports": "node scripts/quality/check-imports.mjs",
+    "check:geography": "node scripts/quality/check-geography.mjs",
+    "lint": "npm run lint:js && npm run lint:python",
+    "lint:js": "eslint --max-warnings 0 .",
+    "lint:python": "node scripts/quality/check-python.mjs",
+    "setup:python-quality": "python3 -m venv .venv && .venv/bin/python -m pip install -r services/collector/requirements-dev.txt"
+  },
+  "dependencies": {
+    "htm": "3.1.1",
+    "preact": "11.0.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "ini": "7.0.0",
+    "lefthook": "2.2.2",
+    "prettier": "3.9.10",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "typescript-eslint": "8.72.0",
+    "vite": "8.3.5",
+    "vitest": "5.0.5",
+    "wrangler": "4.152.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true,
+    "lefthook@2.2.2": false,
+    "workerd@1.20261019.1": true
+  },
+  "overrides": {
+    "undici": "7.30.1"
+  }
+}

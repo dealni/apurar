@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Apurar Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: dark;
+  --apurar-theme-bg: #0b0d12;
+  --apurar-theme-panel: #151820;
+  --apurar-theme-panel-raised: #1c202a;
+  --apurar-theme-border: #303642;
+  --apurar-theme-border-strong: #474a52;
+  --apurar-theme-glass: color-mix(
+    in srgb,
+    var(--apurar-theme-panel) 96%,
+    transparent
+  );
+  --apurar-theme-text: #f5f7fa;
+  --apurar-theme-secondary: #dce1e9;
+  --apurar-theme-muted: #a4abb8;
+  --apurar-theme-accent: #2364d9;
+  --apurar-theme-link: #a9caff;
+  --apurar-theme-focus: #8db8ff;
+  --apurar-theme-font:
+    "Apurar Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --apurar-theme-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --apurar-radius-small: 6px;
+  --apurar-control-radius: 10px;
+  --apurar-radius: 16px;
+  --apurar-dialog-radius: 18px;
+  --apurar-radius-large: 24px;
+  --apurar-touch-target: 44px;
+  --apurar-compact-target: 32px;
+  --apurar-text-body: 13px;
+  --apurar-text-label: 12px;
+  --apurar-text-caption: 11px;
+  --apurar-text-heading: 14px;
+  --apurar-text-value: 42px;
+  --apurar-text-value-small: 26px;
+  --apurar-leading: 1.45;
+  --apurar-leading-copy: 1.55;
+  --apurar-control-weight: 510;
+  --apurar-heading-weight: 600;
+  --apurar-card-shadow: 0 2px 8px #00000014;
+  --apurar-shadow: 0 12px 36px #00000024;
+  font-family: var(--apurar-theme-font);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* A escala do primeiro turno também orienta os novos painéis de resultados. */
+.hud {
+  --t-body: var(--apurar-text-body);
+  --t-label: var(--apurar-text-label);
+  --t-micro: var(--apurar-text-caption);
+  --t-name: var(--apurar-text-heading);
+  --t-fig: var(--apurar-text-value);
+  --t-fig-m: var(--apurar-text-value-small);
+}
+
+::selection {
+  background: #3478f666;
+  color: var(--apurar-theme-text);
+}
+
+:focus-visible {
+  outline: 3px solid var(--apurar-theme-focus);
+  outline-offset: 4px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: #8db8ff33;
+}
+
+/* Apenas controles nativos: gestos de arrastar e ampliar do mapa são próprios. */
+:is(button, a[href], input, select, textarea) {
+  touch-action: manipulation;
+}
+
+:is(button, a[href], input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--apurar-theme-focus);
+  outline-offset: 3px;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --apurar-theme-border: #6c7687;
+    --apurar-theme-border-strong: #8c97aa;
+    --apurar-theme-muted: #c9d1de;
+    --apurar-theme-focus: #b5d2ff;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible,
+  :is(button, a[href], input, select, textarea, summary):focus-visible,
+  .hud :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.apurar-wordmark {
+  display: block;
+  width: 126px;
+  height: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.access-brand .apurar-wordmark {
+  width: 150px;
+}
+
+.site-brand-link:has(.apurar-wordmark),
+.brand:has(> .apurar-wordmark),
+.gov-brand:has(.apurar-wordmark) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+@media (forced-colors: active) {
+  .apurar-wordmark {
+    forced-color-adjust: none;
+  }
+}
+
+/* Tela cheia permanece acessível no cabeçalho compacto dos dois turnos. */
+.hud.phone .hudtop .status .btn:is(.tvb, .tvexit) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--apurar-touch-target);
+  min-height: var(--apurar-touch-target);
+  padding: 0;
+}
+
+/* A escala do painel reduz os controles; 32px preservam o alvo no desktop. */
+.hud :is(.expill, .seg2 button, .zoomctl button) {
+  box-sizing: border-box;
+  min-height: var(--apurar-compact-target);
+  min-width: var(--apurar-compact-target);
+}
+
+/* No estado vazio, título e explicação compartilham o mesmo eixo de leitura. */
+.hud .rbanner-empty .note {
+  text-align: center;
+}

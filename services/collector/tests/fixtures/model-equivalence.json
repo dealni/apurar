@@ -1,0 +1,159 @@
+{
+  "source": "Aplicativos/apuracao",
+  "frozen_at": "2026-10-24",
+  "source_hashes": {
+    "engine.py": "3f88b551a2e13744aabb089153afbe7151c8019863f519739e46b5ba829b6ceb",
+    "runoff.py": "ed6294349fb8b6a286f8ec461e95b1cf17dc520956ae93a73ca22058ff22741c"
+  },
+  "registry": [
+    {
+      "unit_id": "SP:00001",
+      "uf": "SP",
+      "kind": "municipality",
+      "sections_total": 10
+    },
+    {
+      "unit_id": "BA:00002",
+      "uf": "BA",
+      "kind": "municipality",
+      "sections_total": 20
+    },
+    {
+      "unit_id": "ZZ:aggregate",
+      "uf": "ZZ",
+      "kind": "exterior",
+      "sections_total": 2
+    }
+  ],
+  "prior": {
+    "schema": "runoff-prior-v1",
+    "units": {
+      "SP:00001": {
+        "votes_2026": {
+          "13": 600,
+          "22": 1400
+        },
+        "valid_votes": 2000,
+        "sections_total": 10
+      },
+      "BA:00002": {
+        "votes_2026": {
+          "13": 2400,
+          "22": 1600
+        },
+        "valid_votes": 4000,
+        "sections_total": 20
+      },
+      "ZZ:aggregate": {
+        "votes_2026": {
+          "13": 200,
+          "22": 200
+        },
+        "valid_votes": 400,
+        "sections_total": 2
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "name": "pre-count",
+      "units": {},
+      "expected_votes": {
+        "13": 3200.0,
+        "22": 3200.0
+      }
+    },
+    {
+      "name": "partial",
+      "units": {
+        "SP:00001": {
+          "sections_counted": 3,
+          "votes": {
+            "13": 150,
+            "22": 450
+          }
+        },
+        "BA:00002": {
+          "sections_counted": 2,
+          "votes": {
+            "13": 350,
+            "22": 50
+          }
+        }
+      },
+      "expected_votes": {
+        "13": 3367.1028469169114,
+        "22": 3032.8971530830886
+      }
+    },
+    {
+      "name": "correction",
+      "units": {
+        "SP:00001": {
+          "sections_counted": 2,
+          "votes": {
+            "13": 130,
+            "22": 270
+          }
+        },
+        "BA:00002": {
+          "sections_counted": 2,
+          "votes": {
+            "13": 350,
+            "22": 50
+          }
+        }
+      },
+      "expected_votes": {
+        "13": 3421.431195139321,
+        "22": 2978.568804860679
+      }
+    },
+    {
+      "name": "completed-municipality",
+      "units": {
+        "SP:00001": {
+          "sections_counted": 10,
+          "votes": {
+            "13": 0,
+            "22": 2000
+          }
+        }
+      },
+      "expected_votes": {
+        "13": 2521.348377958583,
+        "22": 3878.651622041417
+      }
+    },
+    {
+      "name": "final",
+      "units": {
+        "SP:00001": {
+          "sections_counted": 10,
+          "votes": {
+            "13": 900,
+            "22": 1100
+          }
+        },
+        "BA:00002": {
+          "sections_counted": 20,
+          "votes": {
+            "13": 2500,
+            "22": 1500
+          }
+        },
+        "ZZ:aggregate": {
+          "sections_counted": 2,
+          "votes": {
+            "13": 240,
+            "22": 160
+          }
+        }
+      },
+      "expected_votes": {
+        "13": 3640.0,
+        "22": 2760.0
+      }
+    }
+  ]
+}

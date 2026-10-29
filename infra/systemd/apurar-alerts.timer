@@ -1,0 +1,11 @@
+[Unit]
+Description=Apurar - verificar saude a cada minuto
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=60s
+AccuracySec=5s
+Unit=apurar-alerts.service
+
+[Install]
+WantedBy=timers.target

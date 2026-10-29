@@ -1,0 +1,197 @@
+.num {
+  display: inline;
+  white-space: pre;
+}
+.num.run {
+  white-space: nowrap;
+}
+.num .ch {
+  display: inline-block;
+  position: relative;
+  white-space: pre;
+}
+.num .ch.roll {
+  clip-path: inset(-0.04em -0.3em);
+}
+.num .ch > i {
+  font-style: normal;
+  display: inline-block;
+}
+.num .ch > i.in {
+  animation: digin 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(80ms + var(--j, 0) * 35ms);
+}
+.num .ch > i.out {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: digout 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(80ms + var(--j, 0) * 35ms);
+}
+@keyframes digin {
+  0% {
+    transform: translateY(100%);
+  }
+}
+@keyframes digout {
+  to {
+    transform: translateY(-100%);
+  }
+}
+.hud.tv .tvhide {
+  display: none;
+}
+.hud.tv.idle,
+.hud.tv.idle * {
+  cursor: none;
+}
+.tvexit {
+  flex: none;
+  transition: opacity 0.3s var(--ease);
+}
+.btn.tvcam {
+  gap: 7px;
+}
+.btn.tvcam[aria-pressed="true"] {
+  background: #f7f8f824;
+  color: var(--fg);
+  box-shadow: inset 0 0 0 1px #f7f8f82e;
+}
+.camslot {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1.5px #f7f8f84d;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(250, 250, 249, 0.04) 0 8px,
+    transparent 8px 16px
+  );
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-3);
+  transition: opacity 0.3s var(--ease);
+}
+.camslot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hud.tv.idle .camslot {
+  opacity: 0;
+}
+.hud.tv.idle .tvexit {
+  opacity: 0;
+  pointer-events: none;
+}
+.hud.tv.idle .tvexit:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.hud.tv {
+  --t-manchete: 32px;
+  --t-fig: 50px;
+  --t-fig-m: 30px;
+  --t-name: 19px;
+  --t-body: 17px;
+  --t-label: 16px;
+  --t-micro: 15px;
+}
+.hud.tv .mk.lbl b {
+  font-size: 17px;
+}
+.hud.tv .mk.lbl span {
+  font-size: 15px;
+}
+.hud.tv .mk.box {
+  width: 86px;
+  height: 30px;
+}
+.hud.tv .mk.box b,
+.hud.tv .mk.box span {
+  font-size: 15px;
+}
+.hud.tv .uft {
+  font-size: 14px;
+  min-width: 38px;
+  height: 28px;
+}
+.hud.tv .ct b {
+  font-size: 19px;
+}
+.hud.tv .kpi .v {
+  font-size: 20px;
+}
+.hud.tv .sim {
+  font-size: 16px;
+  padding: 7px 10px;
+}
+.hud.tv .col.l .hero :is(.kick, .others, .more, .kpis) {
+  display: none;
+}
+.hud.tv .live .lw:first-child {
+  display: none;
+}
+.hud.tv .reg {
+  grid-template-columns: minmax(0, 1fr) 26px 84px 38px;
+  padding: 8px 0;
+}
+.hud.tv .reg .bar,
+.hud.tv .regc .aside,
+.hud.tv .chart .lg {
+  display: none;
+}
+.hud.tv .reg .nm {
+  white-space: nowrap;
+}
+.hud.tv .chart text {
+  font-size: 13px;
+}
+.hud.tv .stc .sh h2 {
+  padding-right: 0;
+}
+.hud.tv .hero .then.t1 {
+  display: none;
+}
+.hud.tv .stc .sh .sub {
+  white-space: normal;
+}
+.hud.tv .stc .duel .who {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.hud.tv .stc .duel .cand.r .who {
+  align-items: flex-end;
+}
+.hud.tv .rl .rc b {
+  font-size: 19px;
+}
+.hud.tv .mk,
+.hud.tv .switch button,
+.hud.tv .crumbs button {
+  pointer-events: none;
+  cursor: default;
+}
+.hud[data-h="short"] .xmid:not(.fit *),
+.hud[data-h="short"] .xtall:not(.fit *),
+.hud[data-h="mid"] .xtall:not(.fit *),
+.hud[data-h="mid"] .nomid {
+  display: none;
+}
+.hud[data-h="short"] {
+  --t-manchete: 24px;
+  --t-fig: 36px;
+}
+.hud[data-h="tiny"] .xmid:not(.fit *),
+.hud[data-h="tiny"] .xtall:not(.fit *),
+.hud[data-h="tiny"] .hero .others,
+.hud[data-h="tiny"] .hero .more,
+.hud[data-h="tiny"] .hero .kpis {
+  display: none;
+}
+.hud[data-h="tiny"] {
+  --t-manchete: 22px;
+  --t-fig: 34px;
+}

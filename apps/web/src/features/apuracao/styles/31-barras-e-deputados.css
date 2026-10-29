@@ -1,0 +1,156 @@
+.frame {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--barh, 0px);
+  bottom: 0;
+  contain: layout;
+}
+html.flow .frame {
+  position: static;
+  contain: none;
+}
+body:has(.hud.tv) .frame {
+  top: 0;
+}
+.dhouse {
+  margin: 2px 0 10px -2px;
+}
+.dtot {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 2px 0 10px;
+  font: 400 var(--t-label)/1.4 var(--sans);
+  color: var(--fg-2);
+}
+.dtot b {
+  font: 300 34px/1 var(--serif);
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+.dbar {
+  display: flex;
+  gap: 1px;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: #f7f8f80f;
+}
+.dbar i {
+  display: block;
+  min-width: 2px;
+}
+.drow.spot {
+  margin: 0 -8px;
+  padding: 6px 8px;
+}
+.dmore {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
+  font: 500 var(--t-label)/1.2 var(--sans);
+  color: var(--fg);
+  box-shadow: inset 0 0 0 1px var(--line-3);
+  transition: background-color var(--hover) var(--ease);
+  font-variant-numeric: tabular-nums;
+}
+.dmore:hover {
+  background: #f7f8f80f;
+}
+.dmore:focus-visible,
+.dless:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+.dall {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dfilt {
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0 8px;
+  background: var(--panel, #161513);
+}
+.dfilt input {
+  all: unset;
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: #f7f8f80d;
+  box-shadow: inset 0 0 0 1px #f7f8f821;
+  font: 400 15px/38px var(--sans);
+  color: var(--fg);
+}
+.dfilt input::placeholder {
+  color: var(--fg-3);
+}
+.dfilt input:focus {
+  box-shadow: inset 0 0 0 1px #f7f8f899;
+}
+.dless {
+  all: unset;
+  cursor: pointer;
+  flex: none;
+  padding: 0 10px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 10px;
+  font: 500 var(--t-label)/38px var(--sans);
+  color: var(--fg-2);
+}
+.dless:hover {
+  color: var(--fg);
+}
+.hud.flow .dfilt {
+  position: static;
+  padding-top: 2px;
+}
+.depc > * {
+  flex: none;
+}
+.depc > .dscroll {
+  flex: 1 1 auto;
+  min-height: 96px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin-right: -8px;
+  padding-right: 8px;
+  padding-bottom: 18px;
+  -webkit-mask-image: linear-gradient(#000 calc(100% - 26px), transparent);
+  mask-image: linear-gradient(#000 calc(100% - 26px), transparent);
+}
+.depc > .dscroll .dfilt {
+  top: 0;
+}
+.hud.flow .depc > .dscroll {
+  overflow: visible;
+  min-height: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.dhint {
+  margin: 6px 0 0;
+  text-align: center;
+  font: 400 var(--t-micro)/1.4 var(--sans);
+  color: var(--fg-3);
+}

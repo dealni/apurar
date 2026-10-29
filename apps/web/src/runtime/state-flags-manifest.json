@@ -1,0 +1,196 @@
+{
+  "source": "https://github.com/arthurreira/br-state-flags",
+  "revision": "dee38e893ef00037dc5e1a1bbd886b0ab80a3dab",
+  "license": "MIT",
+  "flags": [
+    {
+      "uf": "AC",
+      "file": "ac.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ac.svg",
+      "sha256": "6a70152b1a310b9d7f975a4043586be390b4f94ba6035c03cbceb28fce09c2db",
+      "bytes": 208
+    },
+    {
+      "uf": "AL",
+      "file": "al.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/al.svg",
+      "sha256": "e62339591101a7be833785810d0b30c5b7f094efc31dcb359b992fa50dae34a4",
+      "bytes": 147448
+    },
+    {
+      "uf": "AM",
+      "file": "am.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/am.svg",
+      "sha256": "a4f0aa3f31237e8e9c11ffccceff965ffc770afc1b65a28cf7ed1a8e68b21494",
+      "bytes": 929
+    },
+    {
+      "uf": "AP",
+      "file": "ap.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ap.svg",
+      "sha256": "9b5aeccb9489acf9bd9e5e241bbeac8d0be552c263aa80ff318a49d495471129",
+      "bytes": 2029
+    },
+    {
+      "uf": "BA",
+      "file": "ba.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ba.svg",
+      "sha256": "2ddeb81bd50a53793e29f3b66a7c1fbad02ae3c98f6c5b39da68343a8d84d9ce",
+      "bytes": 284
+    },
+    {
+      "uf": "CE",
+      "file": "ce.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ce.svg",
+      "sha256": "414738103d6a0069605591cd94ca118e03cf0be5afc65bb14a3e10aeecd80caf",
+      "bytes": 16845
+    },
+    {
+      "uf": "DF",
+      "file": "df.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/df.svg",
+      "sha256": "9839d5b1f8719ecaaf60f86bf96813e9d42ee093d5754899a7c093440da1f503",
+      "bytes": 916
+    },
+    {
+      "uf": "ES",
+      "file": "es.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/es.svg",
+      "sha256": "69457ec8fbd6a4a6f4427cc0e6e18df652deeb169817216d504fe0497c7c800f",
+      "bytes": 4361
+    },
+    {
+      "uf": "GO",
+      "file": "go.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/go.svg",
+      "sha256": "7769530e22285c2e72dcebc0808b0423c5d324c447e4695e684fd549551e518d",
+      "bytes": 986
+    },
+    {
+      "uf": "MA",
+      "file": "ma.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ma.svg",
+      "sha256": "6f1e564c43ffa47f863496050c0cf1e69aa4dfa76ba162a9378fa0d976f6ca95",
+      "bytes": 882
+    },
+    {
+      "uf": "MG",
+      "file": "mg.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/mg.svg",
+      "sha256": "e6efcaf7fd96fc01202b62f8b88027c5dc416f1c28145bb14d3d88d6983eba2e",
+      "bytes": 15917
+    },
+    {
+      "uf": "MS",
+      "file": "ms.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ms.svg",
+      "sha256": "cd7464d5e5e80d99124b206704eff7f4bd3c5a544ba8e394016e5cd47d4fcbee",
+      "bytes": 314
+    },
+    {
+      "uf": "MT",
+      "file": "mt.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/mt.svg",
+      "sha256": "c8ce4e382b4bcd32616dfcb302942c54ea4b0470eb8e417ef5b243f1062365b8",
+      "bytes": 642
+    },
+    {
+      "uf": "PA",
+      "file": "pa.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/pa.svg",
+      "sha256": "498ebabbebcac5ce116357ec6c700b3a06bf611c50e8d1d6f52e2ca8cde2d2ac",
+      "bytes": 690
+    },
+    {
+      "uf": "PB",
+      "file": "pb.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/pb.svg",
+      "sha256": "7ea521e5df8393e6d8ea99cdc23a397b89ce91f4dc12f5951bc44f6396891ffa",
+      "bytes": 1016
+    },
+    {
+      "uf": "PE",
+      "file": "pe.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/pe.svg",
+      "sha256": "e8fb529a29f1238ef59bff57b1a4fe619440602ea095a60019054b9a5ed50c54",
+      "bytes": 1151
+    },
+    {
+      "uf": "PI",
+      "file": "pi.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/pi.svg",
+      "sha256": "f7e566248b2324882702bfdfbdab51361717e52e90fcfd281d5c6102015b15d6",
+      "bytes": 6699
+    },
+    {
+      "uf": "PR",
+      "file": "pr.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/pr.svg",
+      "sha256": "3cf2d805840fef25f5dee836b31a0b932fa22cc33c730d153bade2ff2f5179d6",
+      "bytes": 95010
+    },
+    {
+      "uf": "RJ",
+      "file": "rj.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/rj.svg",
+      "sha256": "39f6d2cebc73b7d398c1f2d7773569619a7cda3514bc5aa471aef23f3c0d84d2",
+      "bytes": 220961
+    },
+    {
+      "uf": "RN",
+      "file": "rn.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/rn.svg",
+      "sha256": "793404a2f3e5b6e3c3e7529cbe623ede56f9f0c9a3b33d75f98414e82e2e3505",
+      "bytes": 90327
+    },
+    {
+      "uf": "RO",
+      "file": "ro.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/ro.svg",
+      "sha256": "82a758022450709b32f7a839a91b9594f6316f664c83687259189de8ca5ab226",
+      "bytes": 414
+    },
+    {
+      "uf": "RR",
+      "file": "rr.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/rr.svg",
+      "sha256": "223483034e8fcbd03dd8c7f72882ec7bf6da671304f2b57633e032e9816533d0",
+      "bytes": 399
+    },
+    {
+      "uf": "RS",
+      "file": "rs.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/rs.svg",
+      "sha256": "b153066f6b22a68f5f30d5777393e0d588f951bb1607f0b1e4664ea804f1ee5b",
+      "bytes": 159504
+    },
+    {
+      "uf": "SC",
+      "file": "sc.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/sc.svg",
+      "sha256": "7d8d3b4cc19be8a5d75ae221f7566cd2fb8a8124327a92fad4961f2e3ee83c6f",
+      "bytes": 71319
+    },
+    {
+      "uf": "SE",
+      "file": "se.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/se.svg",
+      "sha256": "281b0762f5a181f3e7f9b34fe15601529167c4d9e163407fd6d1b62e3ce2c1a5",
+      "bytes": 1008
+    },
+    {
+      "uf": "SP",
+      "file": "sp.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/sp.svg",
+      "sha256": "4d06fb942d97aa8ae98091a702ca940b1128b53cb821fa750a12b7d4410157c1",
+      "bytes": 18139
+    },
+    {
+      "uf": "TO",
+      "file": "to.svg",
+      "source": "https://raw.githubusercontent.com/arthurreira/br-state-flags/dee38e893ef00037dc5e1a1bbd886b0ab80a3dab/svgs/optimized/to.svg",
+      "sha256": "e5dfa26e84f9051d5052fcd474b17d320c3e1c24fc20f4e38814b994bc460973",
+      "bytes": 472
+    }
+  ]
+}

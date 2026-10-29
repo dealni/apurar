@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "file": "capture-pack.br",
+  "encoding": "brotli",
+  "bytes": 175896,
+  "sha256": "4189402075b5cbd72522f8f094aef60a6c016a7963f10944386db87253462cee",
+  "uncompressed_bytes": 10833226,
+  "uncompressed_sha256": "692adad95c8f2ac395734fc0b1b0aa0ca56597a5bf87e3f4438a097a8755723f",
+  "objects": {
+    "d5a329966065d67f92e4ee2194f79ba3323969005acfa9fcfc4100a622614e8e": {
+      "offset": 0,
+      "bytes": 1288,
+      "url": "https://apurar.app/api/snapshots/d5a329966065d67f92e4ee2194f79ba3323969005acfa9fcfc4100a622614e8e",
+      "source": "public-get"
+    },
+    "0dac5b1ca49aaf7d721c462eac2cba7061535b9662eb4e820cadcea1e90b8f1a": {
+      "offset": 1288,
+      "bytes": 3423,
+      "url": "https://apurar.app/api/history/0dac5b1ca49aaf7d721c462eac2cba7061535b9662eb4e820cadcea1e90b8f1a",
+      "source": "public-get"
+    },
+    "8677a371861f70178ea8dffa8981ffa99c8369019ad45f2ea0ce5a42631218e3": {
+      "offset": 4711,
+      "bytes": 2550643,
+      "url": "https://apurar.app/api/municipalities/8677a371861f70178ea8dffa8981ffa99c8369019ad45f2ea0ce5a42631218e3",
+      "source": "public-get"
+    },
+    "914bde11a50c5edaad8041ffbdae276954860fa2fc9ab3c7e8cd26f5a61b4d83": {
+      "offset": 2555354,
+      "bytes": 2297,
+      "url": "https://apurar.app/api/snapshots/914bde11a50c5edaad8041ffbdae276954860fa2fc9ab3c7e8cd26f5a61b4d83",
+      "source": "public-get"
+    },
+    "afb6ce2df99b5d584087139c4d73fbc92e875791b0c0571ac222df4b831bed56": {
+      "offset": 2557651,
+      "bytes": 4757,
+      "url": "https://apurar.app/api/history/afb6ce2df99b5d584087139c4d73fbc92e875791b0c0571ac222df4b831bed56",
+      "source": "public-get"
+    },
+    "fc2de4554f33203d13d21a18598a04da0e98a2527bc0309bf773735dea943279": {
+      "offset": 2562408,
+      "bytes": 2550643,
+      "url": "https://apurar.app/api/municipalities/fc2de4554f33203d13d21a18598a04da0e98a2527bc0309bf773735dea943279",
+      "source": "public-get"
+    },
+    "bc998f7b479109650bd11707e2af23e62dee8da845403a32ae9ccded31e87524": {
+      "offset": 5113051,
+      "bytes": 2297,
+      "url": "https://apurar.app/api/snapshots/bc998f7b479109650bd11707e2af23e62dee8da845403a32ae9ccded31e87524",
+      "source": "public-get"
+    },
+    "0bebe1e8aca4197721ae5f5ef4acb403380f733bc5b6152659a4f154b627ae06": {
+      "offset": 5115348,
+      "bytes": 4757,
+      "url": "https://apurar.app/api/history/0bebe1e8aca4197721ae5f5ef4acb403380f733bc5b6152659a4f154b627ae06",
+      "source": "public-get"
+    },
+    "88e9be5f77b7daaf2f7ace32a8360c3f577e5740b041d2e3e0d9f1a2f975ee03": {
+      "offset": 5120105,
+      "bytes": 2550643,
+      "url": "https://apurar.app/api/municipalities/88e9be5f77b7daaf2f7ace32a8360c3f577e5740b041d2e3e0d9f1a2f975ee03",
+      "source": "public-get"
+    },
+    "2a8d212127cd06da7bc42c35beb0d59990e370f4332250bf895e0b4e9eb4265a": {
+      "offset": 7670748,
+      "bytes": 2343,
+      "url": "https://apurar.app/api/snapshots/2a8d212127cd06da7bc42c35beb0d59990e370f4332250bf895e0b4e9eb4265a",
+      "source": "existing-capture"
+    },
+    "c717cba81e18ae03d83d1cebb5107535172687f4b3f40ae2a7d1de1c36aaa43e": {
+      "offset": 7673091,
+      "bytes": 4757,
+      "url": "https://apurar.app/api/history/c717cba81e18ae03d83d1cebb5107535172687f4b3f40ae2a7d1de1c36aaa43e",
+      "source": "existing-capture"
+    },
+    "1c637ee1328fa1ed9acb86d3a01456108f5b5ec95fa038bf1e46e0f134842abe": {
+      "offset": 7677848,
+      "bytes": 2550643,
+      "url": "https://apurar.app/api/municipalities/1c637ee1328fa1ed9acb86d3a01456108f5b5ec95fa038bf1e46e0f134842abe",
+      "source": "existing-capture"
+    },
+    "b2adca4df7d3ad4d2236b0fcab5a3a1a1e27256cf86d868ebbc7a8b5d18a5f4b": {
+      "offset": 10228491,
+      "bytes": 569064,
+      "url": "https://apurar.app/api/supplemental",
+      "source": "existing-capture"
+    },
+    "da5a591203777ae695c1ac4f42f7e1b045d46cff1abaa5d0ae9f4aaa8e1a5376": {
+      "offset": 10797555,
+      "bytes": 35671,
+      "url": "https://apurar.app/api/archive",
+      "source": "existing-capture"
+    }
+  }
+}

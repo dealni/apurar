@@ -1,0 +1,35 @@
+[Unit]
+Description=Apurar - coleta e publicacao eleitoral
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=apurar
+Group=apurar
+WorkingDirectory=/opt/apurar/current/services/collector
+EnvironmentFile=/etc/apurar/collector.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/apurar/current/.venv/bin/python -m apurar_collector --live --publish-r2 --data-dir /var/lib/apurar/data --state-dir /var/lib/apurar/state --output /var/lib/apurar/public
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=120
+UMask=0077
+MemoryHigh=512M
+MemoryMax=768M
+CPUQuota=100%
+TasksMax=64
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/apurar
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+LockPersonality=true
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target

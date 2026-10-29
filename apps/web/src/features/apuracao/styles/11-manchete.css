@@ -1,0 +1,294 @@
+.rbwrap {
+  position: absolute;
+  z-index: 3;
+}
+.rbanner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 72px;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 20px 28px;
+  overflow: hidden;
+}
+.rb-face {
+  display: flex;
+}
+.rb-mid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.rb-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: end;
+  gap: 16px;
+  margin-bottom: -2px;
+}
+.rb-nm {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  min-width: 0;
+}
+.rb-nm.r {
+  flex-direction: row-reverse;
+}
+.rb-nm b {
+  font: 600 21px/1 var(--sans);
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rb-nm .pm {
+  font: 500 var(--t-label)/1 var(--sans);
+  flex: none;
+}
+.rb-head {
+  margin: 0;
+  text-align: center;
+  font: 400 24px/1.05 var(--serif);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.rb-head .ln {
+  display: inline;
+}
+.rb-head .ln + .ln:before {
+  content: ' ';
+}
+.rb-bar {
+  position: relative;
+  height: 40px;
+}
+.rb-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--panel-3);
+}
+.rb-track > i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  transition:
+    width var(--tb, var(--tw, 0.7s)) var(--run-ease),
+    background-color 0.7s var(--ease);
+}
+.rb-track > i.l {
+  left: 0;
+  padding-left: 14px;
+}
+.rb-track > i.r {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 14px;
+}
+.rb-track b {
+  display: flex;
+  align-items: baseline;
+  flex: none;
+  font: 600 25px/1 var(--sans);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.rb-track b small {
+  font: 600 16px/1 var(--sans);
+  letter-spacing: 0;
+  margin-left: 1px;
+}
+.rb-v {
+  flex: none;
+  margin: 0 14px;
+  font: 500 var(--t-label)/1 var(--sans);
+  opacity: 0.78;
+  white-space: nowrap;
+}
+.rb-fire {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  pointer-events: none;
+  transition: left var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.rb-fire:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(#fff6e3, #ffd9a0 45%, #ffb35c);
+  box-shadow:
+    0 0 6px 1px #ffbe6ebf,
+    0 0 16px 4px #ff8c3c59;
+}
+.rb-fire:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: -18px;
+  width: 36px;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 200, 130, 0.3),
+    rgba(255, 140, 60, 0.1) 60%,
+    transparent
+  );
+}
+.rb-fire i {
+  position: absolute;
+  bottom: 6px;
+  left: -1px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #ffe7bf;
+  box-shadow: 0 0 4px 1px #ffaa5ad9;
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rb-fire:before {
+    animation: seam 1.7s ease-in-out infinite;
+  }
+  .rb-fire:after {
+    animation: heat 2.6s ease-in-out infinite;
+  }
+  .rb-fire i {
+    animation: spark 2.1s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  }
+  .rb-fire i:nth-child(2) {
+    --dx: -5px;
+    animation-delay: 0.42s;
+    animation-duration: 1.8s;
+    bottom: 12px;
+  }
+  .rb-fire i:nth-child(3) {
+    --dx: 4px;
+    animation-delay: 0.9s;
+    animation-duration: 2.4s;
+    bottom: 3px;
+  }
+  .rb-fire i:nth-child(4) {
+    --dx: -3px;
+    animation-delay: 1.35s;
+    animation-duration: 2s;
+    bottom: 16px;
+  }
+  .rb-fire i:nth-child(5) {
+    --dx: 6px;
+    animation-delay: 1.7s;
+    animation-duration: 2.3s;
+    bottom: 9px;
+  }
+}
+@keyframes seam {
+  0%,
+  to {
+    opacity: 0.78;
+  }
+  38% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0.88;
+  }
+}
+@keyframes heat {
+  0%,
+  to {
+    opacity: 0.7;
+    transform: scaleY(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.06);
+  }
+}
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: translate(0) scale(1);
+  }
+  12% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--dx, 3px), -34px) scale(0.4);
+  }
+}
+.rb-50 {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  bottom: -6px;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--fg);
+  box-shadow: 0 0 0 1px #08090ae6;
+}
+.rb-50 em {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px #f7f8f82e;
+  font: 600 var(--t-micro)/1 var(--sans);
+  font-style: normal;
+  color: var(--fg);
+  white-space: nowrap;
+}
+.rb-left {
+  white-space: nowrap;
+  color: var(--fg-3);
+}
+.rb-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #f7f8f80f;
+}
+.rb-foot > i {
+  display: block;
+  height: 100%;
+  background: var(--apur);
+  transition: width var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.rb-apl {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: min(calc(var(--p) * 100%), calc(100% - 20px));
+  min-width: max-content;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 5px;
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+  transition: width var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.rb-apl b {
+  font: 600 var(--t-body)/1 var(--sans);
+  color: var(--apur);
+}

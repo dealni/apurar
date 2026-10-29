@@ -1,0 +1,324 @@
+.sharebox {
+  margin-top: 16px;
+}
+.goal .gl {
+  height: 17px;
+  text-align: center;
+  font: 500 var(--t-micro)/1 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+.goal .gb {
+  position: relative;
+  height: var(--h, 8px);
+  border-radius: 3px;
+  background: var(--panel-3);
+}
+.goal .gb i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition:
+    width var(--tb, var(--tw, 0.7s)) var(--run-ease),
+    background-color 0.7s var(--ease);
+}
+.goal .gb i.l {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.goal .gb i.r {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+.goal .gb .fifty {
+  position: absolute;
+  top: -7px;
+  bottom: -5px;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background: #f7f8f8;
+  box-shadow: 0 0 0 1px #08090ae6;
+}
+.goal.done .gb .fifty {
+  top: -4px;
+  bottom: -4px;
+}
+.goal .gc {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  font: 500 var(--t-micro)/1.2 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+.hero .kv {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+}
+.hero .kv > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font: 500 var(--t-label)/1.2 var(--sans);
+  min-width: 0;
+}
+.hero .kv span {
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+.hero .kv b {
+  font-weight: 500;
+  color: var(--fg);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero.early .fig,
+.hero.early .votes {
+  color: var(--fg-3);
+}
+.chart .wait {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font: 400 var(--t-label)/1.3 var(--sans);
+  color: var(--fg-3);
+}
+.margin {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+.margin > div {
+  min-width: 0;
+  flex: 1 1 0;
+}
+.margin > div:last-child {
+  text-align: right;
+}
+.margin b {
+  overflow-wrap: anywhere;
+}
+.rlist.empty .lh {
+  visibility: hidden;
+}
+.margin .ml {
+  display: block;
+  font: 500 var(--t-micro)/1.3 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+.margin b {
+  display: block;
+  font: 500 var(--t-body)/1.3 var(--sans);
+  color: var(--fg-2);
+  margin-top: 2px;
+}
+.others {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.others .crow {
+  gap: 8px;
+}
+.more {
+  font: 400 var(--t-label)/1.3 var(--sans);
+  color: var(--fg-3);
+  margin-top: 10px;
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 14px;
+}
+.kpi .k {
+  font: 500 var(--t-micro)/1.3 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+}
+.kpi .v {
+  font: 500 16px/1.2 var(--sans);
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+.marks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.2s var(--ease);
+}
+.marks.moving {
+  opacity: 0;
+  transition-duration: 0.12s;
+}
+.marks .leaders {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.marks .leaders line {
+  stroke: #f7f8f847;
+  stroke-width: 1;
+}
+.marks .leaders line.on {
+  stroke: #f7f8f8e6;
+}
+.townpill {
+  position: absolute;
+  z-index: 2;
+  transform: translate(14px, -50%);
+  padding: 5px 10px;
+  border-radius: 100px;
+  background: #08090ad1;
+  border: 1px solid var(--line-2);
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fade 0.3s var(--ease) both;
+}
+.legend .skey {
+  gap: 6px;
+}
+.legend .skey svg {
+  display: block;
+}
+.legend .skey em {
+  font-style: normal;
+  color: var(--fg-3);
+}
+.mk {
+  all: unset;
+  box-sizing: border-box;
+  pointer-events: auto;
+  touch-action: none;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  color: var(--fg);
+  white-space: nowrap;
+}
+.mk.lbl span i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: 1px;
+  box-shadow: 0 0 0 1px #08090a99;
+}
+.mk > * {
+  display: block;
+}
+.mk.lbl {
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+}
+.mk.lbl b {
+  font: 600 12px/1.05 var(--sans);
+  letter-spacing: 0.06em;
+}
+.mk.lbl span {
+  font: 500 11px/1.05 var(--sans);
+}
+.mk.lbl:not(.dark) {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(0, 0, 0, 0.35);
+}
+.mk.lbl.dark {
+  text-shadow:
+    0 0 1px var(--bg),
+    0 0 3px var(--bg),
+    0 0 6px var(--bg),
+    0 0 10px var(--bg);
+}
+.marks.tight .mk.lbl {
+  padding: 1px 2px;
+}
+.marks.tight .mk.lbl b {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.mk.box {
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 70px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: var(--bg);
+  transform: translateY(-50%);
+  transition: box-shadow var(--hover) var(--ease);
+}
+.mk.box b {
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.06em;
+}
+.mk.box span {
+  font: 500 11px/1 var(--sans);
+}
+.mk.box:hover,
+.mk.box:focus-visible,
+.mk.box.on {
+  box-shadow: 0 0 0 2px var(--fg);
+}
+.mk.box.ext {
+  gap: 6px;
+  box-shadow: 0 0 0 1px #f7f8f847;
+}
+.mk.box.ext .globe {
+  flex: none;
+  opacity: 0.95;
+}
+.mk.box.ext:hover,
+.mk.box.ext:focus-visible,
+.mk.box.ext.on {
+  box-shadow: 0 0 0 2px var(--fg);
+}
+.hud.phone .mk.box.ext {
+  width: 22px;
+  height: 16px;
+  padding: 0;
+  justify-content: center;
+}
+.mk.lbl:hover,
+.mk.lbl.on {
+  background: #08090a59;
+}
+.mk.lbl:focus-visible {
+  background: #08090ab3;
+  box-shadow: 0 0 0 2px var(--fg);
+}
+.mk:focus-visible {
+  outline: none;
+}
+.hud.phone .mk.box {
+  width: auto;
+  min-width: 30px;
+  justify-content: center;
+  padding: 0 6px;
+}

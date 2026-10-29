@@ -1,0 +1,18 @@
+[
+  {"arcs":[[918,919,920,921]],"type":"Polygon","properties":{"id":"1600055","n":"Serra do Navio","uf":"AP","p":4673}},
+  {"arcs":[[[922,923,924,925,926,927]],[[928]]],"type":"MultiPolygon","properties":{"id":"1600105","n":"Amapá","uf":"AP","p":7943}},
+  {"arcs":[[-922,929,930,931,932,933]],"type":"Polygon","properties":{"id":"1600154","n":"Pedra Branca do Amapari","uf":"AP","p":12847}},
+  {"arcs":[[-920,934,935,-923,936]],"type":"Polygon","properties":{"id":"1600204","n":"Calçoene","uf":"AP","p":10612}},
+  {"arcs":[[-926,937,938,939]],"type":"Polygon","properties":{"id":"1600212","n":"Cutias","uf":"AP","p":4461}},
+  {"arcs":[[-921,940,941,-939,942,943,-930]],"type":"Polygon","properties":{"id":"1600238","n":"Ferreira Gomes","uf":"AP","p":6666}},
+  {"arcs":[[-480,944,-655]],"type":"Polygon","properties":{"id":"1600253","n":"Itaubal","uf":"AP","p":5599}},
+  {"arcs":[[-497,945,946,-933,947,948]],"type":"Polygon","properties":{"id":"1600279","n":"Laranjal do Jari","uf":"AP","p":35114}},
+  {"arcs":[[-479,949,950,-943,-938,-925,951,-656,-945]],"type":"Polygon","properties":{"id":"1600303","n":"Macapá","uf":"AP","p":442933}},
+  {"arcs":[[-477,-721,952,-948,-932,953,954]],"type":"Polygon","properties":{"id":"1600402","n":"Mazagão","uf":"AP","p":21924}},
+  {"arcs":[[-919,-934,-947,955,-935]],"type":"Polygon","properties":{"id":"1600501","n":"Oiapoque","uf":"AP","p":27482}},
+  {"arcs":[[-931,-944,-951,956,-954]],"type":"Polygon","properties":{"id":"1600535","n":"Porto Grande","uf":"AP","p":17848}},
+  {"arcs":[[-928,957,-941,-937]],"type":"Polygon","properties":{"id":"1600550","n":"Pracuúba","uf":"AP","p":3803}},
+  {"arcs":[[-478,-955,-957,-950]],"type":"Polygon","properties":{"id":"1600600","n":"Santana","uf":"AP","p":107618}},
+  {"arcs":[[-927,-940,-942,-958]],"type":"Polygon","properties":{"id":"1600709","n":"Tartarugalzinho","uf":"AP","p":12945}},
+  {"arcs":[[-498,-949,-953,-720]],"type":"Polygon","properties":{"id":"1600808","n":"Vitória do Jari","uf":"AP","p":11291}}
+]

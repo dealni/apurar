@@ -1,0 +1,209 @@
+/* O mapa abre a leitura; filtros e explicações se expandem no próprio fluxo. */
+.frame:has(.governadores-principal.hud.flow) {
+  overflow: visible;
+}
+.governadores-principal.hud.phone.flow {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100dvh;
+  padding: 12px max(var(--m), env(safe-area-inset-left))
+    max(28px, env(safe-area-inset-bottom));
+  overflow: visible;
+}
+.governadores-principal.hud.flow .gov-header.hudtop {
+  position: relative;
+  inset: auto;
+  flex: none;
+  height: auto;
+}
+.governadores-principal.hud.flow .gov-workspace {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.governadores-principal.hud.flow
+  .gov-workspace
+  > :is(.gov-sidebar, .gov-detail) {
+  position: relative;
+  inset: auto;
+  display: flex;
+  width: 100%;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+.governadores-principal.hud.flow .gov-detail {
+  order: 1;
+  gap: 12px;
+  scroll-margin-top: 84px;
+}
+.governadores-principal.hud.flow .gov-detail > .sh {
+  padding-inline: var(--pad);
+}
+.governadores-principal.hud.flow .gov-detail .gov-result {
+  padding: var(--pad);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--glass);
+}
+.governadores-principal.hud.flow .gov-map-column {
+  position: relative;
+  inset: auto;
+  order: 0;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  visibility: visible;
+  pointer-events: auto;
+}
+.governadores-principal.hud.flow .gov-stage {
+  position: relative;
+  inset: auto;
+  height: clamp(280px, calc((100vw - 32px) * 1.02), 560px);
+}
+.governadores-principal.hud.phone .gov-map-column .gov-breadcrumb {
+  display: none;
+}
+.governadores-principal.hud.flow .gov-sidebar {
+  order: 2;
+}
+.governadores-principal.hud.phone .gov-sidebar > .gov-summary {
+  display: none;
+}
+.governadores-principal.hud.flow .gov-notice {
+  bottom: 20px;
+}
+/* Tablet mantém a mesma prioridade e usa toda a largura disponível para o mapa. */
+.governadores-principal.hud.phone.tablet .gov-workspace {
+  grid-template-columns: minmax(0, 1fr);
+}
+.governadores-principal.hud.phone.tablet .gov-workspace > .gov-map-column {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 0;
+}
+.governadores-principal.hud.phone.tablet .gov-map-context {
+  position: relative;
+}
+.governadores-principal.hud.phone.tablet .gov-stage {
+  position: relative;
+  inset: auto;
+  height: 480px;
+}
+.governadores-principal.hud.phone.tablet .gov-workspace > .gov-detail {
+  grid-column: 1;
+  grid-row: 2;
+}
+.governadores-principal.hud.phone.tablet .gov-workspace > .gov-sidebar {
+  grid-column: 1;
+  grid-row: 3;
+}
+/* Os controles ocupam uma linha própria para preservar os alvos do mapa. */
+.hud.governadores-principal:is(.flow, .tablet, .land) .gov-stage {
+  box-sizing: content-box;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+.hud.governadores-principal:is(.flow, .tablet, .land) .gov-stage > .zoomctl {
+  left: auto !important;
+  top: auto !important;
+  right: 0;
+  bottom: 0;
+  transform: none;
+  flex-direction: row;
+}
+.hud.governadores-principal:is(.flow, .tablet, .land) .gov-stage > .marks {
+  bottom: 60px;
+  overflow: hidden;
+}
+.governadores-principal.hud.phone.land .gov-map-column {
+  min-height: 0;
+}
+.governadores-principal.hud.phone.land .gov-stage {
+  position: relative;
+  inset: auto;
+  height: 360px;
+}
+.governadores-principal.hud.phone.tv .gov-map-context,
+.governadores-principal.hud.phone.tv .gov-map-followup {
+  display: none;
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .governadores-principal.hud:not(.phone) {
+    --gov-side: 240px;
+  }
+  .governadores-principal .gov-race.krow {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .governadores-principal .gov-race.krow .kn {
+    flex: 1;
+    min-width: 0;
+  }
+}
+/* O resultado responde à própria coluna, inclusive nas laterais do computador. */
+.governadores-principal .gov-workspace > .gov-detail {
+  container: governador-detalhe / inline-size;
+}
+@container governador-detalhe (max-width: 350px) {
+  .governadores-principal .gov-detail .gov-result .leaders {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+  .governadores-principal .gov-detail .gov-result .leader {
+    display: flex;
+    align-items: flex-start;
+    grid-row: auto;
+    text-align: left;
+  }
+  .governadores-principal .gov-detail .gov-result .leader .who {
+    flex-direction: row;
+  }
+  .governadores-principal .gov-detail .gov-result .leader .nm {
+    display: block;
+    overflow: visible;
+    overflow-wrap: anywhere;
+  }
+  .governadores-principal .gov-detail .gov-result .leader .pm {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+.governadores-principal:not(.phone) .gov-map-help {
+  position: absolute;
+  left: calc(var(--gov-side) + 40px);
+  right: calc(var(--gov-side) + 40px);
+  bottom: 16px;
+  z-index: 3;
+}
+.governadores-principal:not(.phone) .gov-map-help > summary {
+  justify-content: center;
+}
+.governadores-principal:not(.phone) .gov-map-help[open] {
+  padding: 0 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+/* A apresentação alternativa com abas conserva os filtros na seção Explorar. */
+.governadores-principal.hud.phone.shell .gov-sidebar > .gov-summary {
+  display: block;
+}
+.governadores-principal.hud.phone.shell .gov-map-column .gov-breadcrumb {
+  display: flex;
+}
+/* Ajuda fica em Explorar; nenhuma camada cobre o zoom no mapa por abas. */
+.governadores-principal.hud.phone.shell .gov-summary .gov-map-help {
+  margin-top: 12px;
+}
+.governadores-principal.hud.phone.shell .gov-summary .gov-map-help > summary {
+  justify-content: flex-start;
+}

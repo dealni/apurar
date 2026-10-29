@@ -1,0 +1,30 @@
+node_modules
+dist
+package-lock.json
+test-results
+playwright-report
+.git
+
+# Capturas estáticas e dados gerados preservam hashes da importação.
+apps/web/public/
+apps/web/src/data/generated/
+# Mapa oficial serializado: inventário em check:imports e FONTE-TSE-2026.md.
+apps/web/src/integration/municipality-ids.json
+
+# Interface histórica preservada integralmente; integridade coberta por check:imports.
+apps/web/src/features/apuracao/
+apps/web/1turno/index.html
+apps/web/src/features/anunciar/
+apps/web/src/pages/anunciar/
+apps/web/anunciar/index.html
+apps/web/src/content/cards/
+apps/web/src/content/curva.json
+
+# Malha IBGE serializada; hashes e cobertura conferidos nos gates.
+apps/web/src/data/official-geography-2025/
+
+# Logos oficiais preservados exatamente como publicados pelas marcas.
+apps/web/src/runtime/assets/social/
+
+# SVGs de bandeiras preservados com hashes de origem.
+apps/web/src/runtime/assets/flags/

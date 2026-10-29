@@ -1,0 +1,21 @@
+[Unit]
+Description=Apurar - diagnostico e alertas Telegram deduplicados
+After=network-online.target apurar-collector.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=apurar
+Group=apurar
+WorkingDirectory=/opt/apurar/current/services/collector
+EnvironmentFile=/etc/apurar/alerts.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/apurar/current/.venv/bin/python -B -m apurar_collector.diagnostics_alerts --state-dir /var/lib/apurar/state --output /var/lib/apurar/public --alert-state /var/lib/apurar/alerts/delivery.json --max-age ${APURAR_ALERT_MAX_AGE} --max-pending ${APURAR_ALERT_MAX_PENDING} --min-free ${APURAR_ALERT_MIN_FREE} --max-bytes ${APURAR_ALERT_MAX_BYTES} --retry-seconds 60
+TimeoutStartSec=60
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/apurar/alerts
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX

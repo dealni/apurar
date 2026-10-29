@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-24",
+  "scope": "Extração headless segundo turno presidencial, sem replay/prior2022 de runtime.",
+  "files": [
+    {
+      "source": "Aplicativos/apuracao/app/__init__.py",
+      "target": "services/collector/apurar_collector/core/__init__.py",
+      "source_sha256": "85a9d01d603f848c3d8ac1a6131707b4dcdffd5bc699905c0e0dbdf983ba6829",
+      "target_sha256": "85a9d01d603f848c3d8ac1a6131707b4dcdffd5bc699905c0e0dbdf983ba6829",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo."
+    },
+    {
+      "source": "Aplicativos/apuracao/app/config.py",
+      "target": "services/collector/apurar_collector/core/config.py",
+      "source_sha256": "0a39299b4eadda03b452ccc0b190c07a1e00df1d622c96014911cdd028121740",
+      "target_sha256": "e657e3232c6670d1d3462c19a8999411ffc115088ea70bb739244681d4de2284",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo."
+    },
+    {
+      "source": "Aplicativos/apuracao/app/engine.py",
+      "target": "services/collector/apurar_collector/core/engine.py",
+      "source_sha256": "3f88b551a2e13744aabb089153afbe7151c8019863f519739e46b5ba829b6ceb",
+      "target_sha256": "3d598e2f896af43d0783e3c5c58d5b8464d6356e2c3d21912bc8630b3a7422bd",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo."
+    },
+    {
+      "source": "Aplicativos/apuracao/app/runoff.py",
+      "target": "services/collector/apurar_collector/core/runoff.py",
+      "source_sha256": "ed6294349fb8b6a286f8ec461e95b1cf17dc520956ae93a73ca22058ff22741c",
+      "target_sha256": "eef4ded819ee09f2ad2ca768e0dfe69f03bce80f81c37e77adcabcc2ea1dab63",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo."
+    },
+    {
+      "source": "Aplicativos/apuracao/app/tse.py",
+      "target": "services/collector/apurar_collector/core/tse.py",
+      "source_sha256": "afff9547d2ed5fe4e9bfe6296b01a60bc991d850d2cc45996b03ee41e298154f",
+      "target_sha256": "bad6b9c150739bc2f3331b6e25486f4805ea0b07509867fe0b6bebd83a924000",
+      "adaptation": "Revisão de 24/10/2026: tratamento de destinação de votos e sincronização municipal após encerramento, com testes de regressão. Núcleo matemático preservado. Totais municipais EA20 e enriquecimento restrito de metadados da mesma geração; detalhes em docs/TOTAIS-MUNICIPAIS.md.",
+      "initial_target_sha256": "423b36fefcedd7f3531cb03a50f652cf51792109501e250a69b3b0c48d9f6308"
+    },
+    {
+      "source": "Aplicativos/apuracao/app/collector.py",
+      "target": "services/collector/apurar_collector/core/collector.py",
+      "source_sha256": "c076782e4d5d68f53306ed9dd09ae7ceaa8f2a5db47c8287bcef17a0f478b697",
+      "target_sha256": "f2c235ddbf09f190875673142708128ac1fd0f76e677c0e94694be01df69a9e9",
+      "adaptation": "Revisão de 24/10/2026: tratamento de destinação de votos e sincronização municipal após encerramento, com testes de regressão. Núcleo matemático preservado. Totais municipais EA20 e enriquecimento restrito de metadados da mesma geração; detalhes em docs/TOTAIS-MUNICIPAIS.md.",
+      "initial_target_sha256": "ccbc05915292818348c88983e5a22a5b351dc97e0980d17d01a27987a6ed3a76"
+    },
+    {
+      "source": "Aplicativos/apuracao/app/units.py",
+      "target": "services/collector/apurar_collector/core/units.py",
+      "source_sha256": "b27b263a91fa403be1ea2657cfc4f678255ba41dcd630b4c7a351323f150651a",
+      "target_sha256": "b27b263a91fa403be1ea2657cfc4f678255ba41dcd630b4c7a351323f150651a",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo."
+    },
+    {
+      "source": "Aplicativos/apuracao/app/store.py",
+      "target": "services/collector/apurar_collector/core/store.py",
+      "source_sha256": "eafd90c4f93f3b38b23fae5ab72244a68016720784999c52c2ee9a3de9b076ab",
+      "target_sha256": "bc2505bc67f76442c5ad90e57cd9cc712b35c77953b85d43aa9143a307397dc2",
+      "adaptation": "Formatação Ruff, sem alteração do algoritmo. Totais municipais EA20 e enriquecimento restrito de metadados da mesma geração; detalhes em docs/TOTAIS-MUNICIPAIS.md.",
+      "initial_target_sha256": "c4f5be3b6754a3520dac2bd6eeae040783fdc4ffbfbfa894eff2972962c41004"
+    },
+    {
+      "source": "Aplicativos/apuracao/tests/test_tse.py",
+      "target": "services/collector/tests/test_tse.py",
+      "source_sha256": "0dd63c55c90b7f117c8a1cd132a74926f2cdce181d59b0800884a69c6037ffcd",
+      "target_sha256": "c0b36a40e420f3a4d2bd384124a12ad3bd58b05cb9add9e868aa595e62ae7b33",
+      "adaptation": "Revisão de 24/10/2026: tratamento de destinação de votos e sincronização municipal após encerramento, com testes de regressão. Núcleo matemático preservado.",
+      "initial_target_sha256": "bf7c234d0e8cfdaceb9054903338592e9ccc3103d80da2e6148a64c7412fad7f"
+    },
+    {
+      "source": "Aplicativos/apuracao/tests/test_collector.py",
+      "target": "services/collector/tests/test_collector.py",
+      "source_sha256": "970ff6ca36a9f862431ae0ec7d23970fac6e34222137125e883823e0d0887a16",
+      "target_sha256": "05e40f3c1a672cef2649d7075594a1351ad78c3457ca6feb2800c5d6ea2a5612",
+      "adaptation": "Revisão de 24/10/2026: tratamento de destinação de votos e sincronização municipal após encerramento, com testes de regressão. Núcleo matemático preservado.",
+      "initial_target_sha256": "19f8ce459203eb2ad6568f07f86b4e4beb475990d9fbe7fe3f1a3ffd611576d7"
+    },
+    {
+      "source": "Aplicativos/apuracao/tests/test_engine.py",
+      "target": "services/collector/tests/test_engine.py",
+      "source_sha256": "9175808b35fef72b54aa794261c8fc4052a448b51efc4ef3d34052d9825c0a0a",
+      "target_sha256": "80d17aebcaad61cba57aa42e3e95e7ae4bd600f8275717ecef5888642127c3fe",
+      "adaptation": "Import app.* substituído por apurar_collector.core.* e formatação Ruff."
+    }
+  ],
+  "extracted_responsibilities": [
+    {
+      "source": "Aplicativos/apuracao/app/service.py:_live_forecast",
+      "target": "services/collector/apurar_collector/model.py:forecast",
+      "adaptation": "Conciliação e suspensão preservadas; cadastro validado por identidade completa contra prior em vez de contagem fixa 5571."
+    }
+  ],
+  "dataset_manifest": "services/collector/dataset-manifest.json",
+  "equivalence": "services/collector/tests/fixtures/model-equivalence.json",
+  "post_migration_review": "Correções posteriores à extração em docs/CORRECOES-REVISAO.md; initial_target_sha256 conserva o hash migrado inicial quando alterado."
+}

@@ -1,0 +1,36 @@
+const majorParties = new Set([
+  'PL',
+  'PT',
+  'PSD',
+  'UNIÃO',
+  'UNIAO',
+  'MDB',
+  'PP',
+  'REPUBLICANOS',
+  'PSB',
+  'PSDB',
+  'PDT',
+  'PODE',
+  'PODEMOS',
+]);
+const midParties = new Set([
+  'PSOL',
+  'NOVO',
+  'CIDADANIA',
+  'SOLIDARIEDADE',
+  'AVANTE',
+  'PV',
+  'PC do B',
+  'PCdoB',
+  'REDE',
+  'PRD',
+  'MOBILIZA',
+  'AGIR',
+  'DC',
+  'PRTB',
+  'MISSÃO',
+  'MISSAO',
+  'PMB',
+]);
+export const partyScale = (y) =>
+  majorParties.has(y) ? 1 : midParties.has(y) ? 0.34 : 0.07;

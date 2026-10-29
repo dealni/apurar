@@ -1,0 +1,25 @@
+User-agent: WhatsApp
+User-agent: facebookexternalhit
+User-agent: Facebot
+User-agent: Twitterbot
+User-agent: TelegramBot
+User-agent: LinkedInBot
+User-agent: Slackbot
+User-agent: Discordbot
+Allow: /
+
+User-agent: Googlebot
+User-agent: Bingbot
+Content-Signal: search=yes, ai-input=no, ai-train=no
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: *
+Content-Signal: search=no, ai-input=no, ai-train=no
+Disallow: /
+
+Sitemap: https://apurar.app/sitemap.xml

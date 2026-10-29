@@ -1,0 +1,63 @@
+/* Ajustes Apurar sobre o design recuperado: a hierarquia e os mapas permanecem. */
+.brand b small {
+  font: 400 11px var(--sans);
+  color: var(--fg-3);
+  margin-left: 6px;
+  letter-spacing: 0;
+}
+.pbar,
+.adbar,
+.adcard,
+.pmarks,
+.patrocinio,
+.about .byp {
+  display: none !important;
+}
+.apurar-projection {
+  border-top: 1px solid var(--line-2);
+  padding-top: 12px;
+  margin-top: 12px;
+  font: 400 12px/1.55 var(--sans);
+  color: var(--fg-2);
+}
+.apurar-projection h3 {
+  font: 400 18px/1.2 var(--serif);
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+.apurar-projection .pj-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 0;
+}
+.apurar-projection .pj-note {
+  color: var(--fg-3);
+  font-size: 11px;
+  margin-top: 8px;
+}
+.apurar-projection .pj-warning {
+  color: #e5c389;
+  padding: 6px 0;
+}
+.apurar-wait {
+  color: #e5c389;
+  font-size: 12px;
+  padding: 8px 0;
+}
+@media (max-width: 600px) {
+  .brand b small {
+    font-size: 10px;
+  }
+}
+
+/* O controle TV permanece acessível também no cabeçalho compacto. */
+.hud.phone .status .btn.tvb {
+  display: inline-flex;
+}
+.hud .aviso {
+  pointer-events: none;
+}
+.hud.phone .status .btn.tvexit {
+  display: inline-flex;
+}

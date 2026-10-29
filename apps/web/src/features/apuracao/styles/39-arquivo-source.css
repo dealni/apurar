@@ -1,0 +1,38 @@
+:root {
+  --barh: 26px;
+}
+.archive-source {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 12;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 26px;
+  padding: 5px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--fg-3);
+  font: 400 11px/16px var(--sans);
+}
+html.flow .frame {
+  padding-top: var(--barh);
+}
+body:has(.hud.tv) .frame {
+  top: var(--barh);
+  padding-top: 0;
+}
+@media (max-width: 600px) {
+  :root {
+    --barh: 44px;
+  }
+  .archive-source {
+    align-items: center;
+    min-height: 44px;
+    padding: 5px 12px;
+  }
+  .archive-source > * {
+    flex: 1;
+    min-width: 0;
+  }
+}

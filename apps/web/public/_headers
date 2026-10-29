@@ -1,0 +1,23 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/apurar
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/apurar/
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/apurar/index.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/1turno
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/1turno/
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/1turno/index.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform

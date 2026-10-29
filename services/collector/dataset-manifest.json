@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "basis": "first-turn-2026-only",
+  "target_election": "6258",
+  "round": 2,
+  "candidate_ids": ["13", "22"],
+  "training_target_2026_round2_used": false,
+  "files": {
+    "prior_runoff2026.json": {
+      "sha256": "d96e5a1327327d6dd7f2af580ed56f3590631c34f48188a2bd357a187989f380"
+    },
+    "cadastro.json": {
+      "sha256": "11e9318c3b92eedfa6b6b766d6cdf31ab541dc5d13e76e95c673f6c7997a7b42"
+    }
+  },
+  "upstream_manifest_sha256": "80eaf00b8fa1ec7360bf8e81f9e25b8578c0e69ca1d236a164cd2059a99c4186",
+  "sources": [
+    {
+      "url": "https://evolucao-totalizacao.tse.jus.br/",
+      "election": "6257",
+      "round": 1,
+      "input": "Último estado completo de cada município do primeiro turno de 2026."
+    }
+  ],
+  "limitations": [
+    "Renormalização agregada, sem identificação de transferências individuais.",
+    "Não há probabilidade de vitória calibrada."
+  ]
+}

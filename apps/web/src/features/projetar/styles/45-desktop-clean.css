@@ -1,0 +1,83 @@
+/* Painéis de apoio discretos deixam o mapa como superfície principal. */
+@media (min-width: 1000px) {
+  .hud:not(.phone):not(.tv) .col > .card {
+    background: color-mix(in srgb, var(--panel) 55%, var(--bg));
+    border-color: transparent;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+  .hud:not(.phone):not(.tv) .col .card > .hd {
+    margin-bottom: 12px;
+  }
+  .hud:not(.phone):not(.tv) .col .apurar-projection:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .hud:not(.phone):not(.tv) .col .apurar-projection h3 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .hud:not(.phone):not(.tv) .natc {
+    overflow-y: auto;
+  }
+  .hud:not(.phone):not(.tv) .natc > .ns-pj,
+  .hud:not(.phone):not(.tv) .natc .fcbox {
+    flex: none;
+  }
+  .hud:not(.phone):not(.tv) .natc .fcv {
+    flex: none;
+    height: 128px;
+  }
+  .hud:not(.phone):not(.tv) .rbanner {
+    box-shadow: none;
+    border-radius: 12px;
+  }
+  .hud:not(.phone):not(.tv) .aviso {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .hud:not(.phone):not(.tv) .tlp {
+    background: color-mix(in srgb, var(--panel) 65%, var(--bg));
+  }
+}
+
+/* O resultado mantém largura legível e devolve espaço horizontal ao mapa. */
+.hud.tablet {
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+.hud.tablet > .pcard {
+  border-color: transparent;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel) 55%, var(--bg));
+  box-shadow: none;
+}
+.hud.tablet > .pcard > .card {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.hud.tablet .apurar-projection h3 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+.hud.tablet > .aviso {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* A opção do sistema restaura a separação forte entre superfícies. */
+@media (prefers-contrast: more) and (min-width: 1000px) {
+  .hud:not(.phone):not(.tv) .col > .card {
+    border-color: var(--line-2);
+    background: var(--panel);
+  }
+}
+@media (prefers-contrast: more) {
+  .hud.tablet > .pcard {
+    border: 1px solid var(--line-2);
+    background: var(--panel);
+  }
+}

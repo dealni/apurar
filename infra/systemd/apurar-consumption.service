@@ -1,0 +1,22 @@
+[Unit]
+Description=Apurar - telemetria Cloudflare e alertas de consumo no DealniBot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=apurar
+Group=apurar
+WorkingDirectory=/opt/apurar/current/services/collector
+EnvironmentFile=/etc/apurar/alerts.env
+EnvironmentFile=/etc/apurar/consumption.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/apurar/current/.venv/bin/python -B -m apurar_collector.consumption_alerts --state /var/lib/apurar/alerts/consumption.json
+TimeoutStartSec=100
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/apurar/alerts
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX

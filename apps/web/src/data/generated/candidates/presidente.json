@@ -1,0 +1,14 @@
+[
+  {"n":"13","nome":"LULA","exib":"Lula","partido":"PT","partidoN":"13","coligacao":"BRASIL PRONTO PRA MAIS","composicao":"PSB / PDT / PCDOB / PT / PV / PSOL / REDE","sq":"280002542548","g":"M","nomeCompleto":"LUIZ INÁCIO LULA DA SILVA","vice":"GERALDO ALCKMIN"},
+  {"n":"14","nome":"RENAN SANTOS","exib":"Renan Santos","partido":"MISSÃO","partidoN":"14","coligacao":"","composicao":"","sq":"280002540694","g":"M","nomeCompleto":"RENAN ANTONIO FERREIRA DOS SANTOS","vice":"CORONEL MEDINA"},
+  {"n":"16","nome":"HERTZ DIAS","exib":"Hertz Dias","partido":"PSTU","partidoN":"16","coligacao":"","composicao":"","sq":"280002541457","g":"M","nomeCompleto":"HERTZ DA CONCEICAO DIAS","vice":"VANESSA PORTUGAL"},
+  {"n":"21","nome":"EDMILSON COSTA","exib":"Edmilson Costa","partido":"PCB","partidoN":"21","coligacao":"","composicao":"","sq":"280002551975","g":"M","nomeCompleto":"EDMILSON SILVA COSTA","vice":"CLEUSA SANTOS"},
+  {"n":"22","nome":"FLAVIO BOLSONARO","exib":"Flávio Bolsonaro","partido":"PL","partidoN":"22","coligacao":"","composicao":"","sq":"280002551544","g":"M","nomeCompleto":"FLAVIO NANTES BOLSONARO","vice":"ALFREDO GASPAR"},
+  {"n":"27","nome":"CLARIANA BARAO","exib":"Clariana Barão","partido":"DC","partidoN":"27","coligacao":"","composicao":"","sq":"280002552484","g":"F","nomeCompleto":"CLARIANA ZACARKIM BARAO","vice":"FABIANA TORQUATO"},
+  {"n":"29","nome":"RUI COSTA PIMENTA","exib":"Rui Costa Pimenta","partido":"PCO","partidoN":"29","coligacao":"","composicao":"","sq":"280002552487","g":"M","nomeCompleto":"RUI COSTA PIMENTA","vice":"ANTÔNIO CARLOS"},
+  {"n":"30","nome":"ZEMA","exib":"Zema","partido":"NOVO","partidoN":"30","coligacao":"","composicao":"","sq":"280002539826","g":"M","nomeCompleto":"ROMEU ZEMA NETO","vice":"EDUARDO GIRÃO"},
+  {"n":"35","nome":"VETERINÁRIO WILSON GRASSI","exib":"Veterinário Wilson Grassi","partido":"DEMOCRATA","partidoN":"35","coligacao":"","composicao":"","sq":"280002548139","g":"M","nomeCompleto":"WILSON GRASSI JUNIOR","vice":"SUÊD HAIDAR"},
+  {"n":"55","nome":"RONALDO CAIADO","exib":"Ronaldo Caiado","partido":"PSD","partidoN":"55","coligacao":"","composicao":"","sq":"280002551932","g":"M","nomeCompleto":"RONALDO RAMOS CAIADO","vice":"GILBERTO KASSAB"},
+  {"n":"70","nome":"ESCRITOR AUGUSTO CURY","exib":"Escritor Augusto Cury","partido":"AVANTE","partidoN":"70","coligacao":"BRASIL DOS NOSSOS SONHOS","composicao":"AGIR / AVANTE","sq":"280002551547","g":"M","nomeCompleto":"AUGUSTO JORGE CURY","vice":"JÚLIO DELGADO"},
+  {"n":"80","nome":"SAMARA","exib":"Samara","partido":"UP","partidoN":"80","coligacao":"","composicao":"","sq":"280002538811","g":"F","nomeCompleto":"SAMARA MARTINS DA SILVA FEITOSA","vice":"RAQUEL BRÍCIO"}
+]

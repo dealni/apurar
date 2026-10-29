@@ -1,0 +1,165 @@
+/* Marca e busca são prioritárias; ações do mapa permanecem a um toque. */
+.clean-header .map-action-label {
+  display: none;
+}
+.map-actions {
+  position: relative;
+  flex: none;
+}
+.map-actions > summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line-2);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--fg-2);
+  cursor: pointer;
+  list-style: none;
+}
+.map-actions > summary::-webkit-details-marker {
+  display: none;
+}
+.map-actions > summary:hover,
+.map-actions[open] > summary {
+  background: var(--panel-2);
+  border-color: var(--line-3);
+  color: var(--fg);
+}
+.map-actions > summary:focus-visible {
+  outline: 2px solid var(--apurar-theme-focus);
+  outline-offset: 2px;
+}
+.map-actions-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.map-actions-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  display: grid;
+  gap: 4px;
+  width: min(264px, calc(100vw - 32px));
+  padding: 8px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 12px 36px #0008;
+}
+.hud.phone .clean-header .map-actions-panel :is(.btn, .expill) {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+}
+.clean-header .map-actions-panel .map-action-label {
+  display: inline;
+}
+.hud.phone .clean-header .map-actions-panel :is(.btn, .expill):hover {
+  border-color: var(--line-2);
+}
+.hud.phone:not(.tv) .clean-header.hudtop {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  height: auto;
+  min-height: 44px;
+  overflow: visible;
+  container-type: normal;
+  z-index: 10;
+}
+.hud.phone:not(.tv) .clean-header.hudtop > .brand {
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 8px;
+  padding: 0;
+}
+.hud.phone:not(.tv) .clean-header.hudtop > .status {
+  display: flex;
+  flex: none;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: auto;
+  margin: 0;
+}
+.hud.phone:not(.tv) .clean-header.hudtop > .sbtn {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+.hud.phone .clean-header .site-navigation-trigger {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+}
+.hud.phone .clean-header .site-navigation-trigger span {
+  display: none;
+}
+.hud.phone .clean-header .site-brand-link .apurar-wordmark {
+  width: 112px;
+  height: auto;
+}
+@media (max-width: 359px) {
+  .hud.phone .clean-header .site-brand-link .apurar-wordmark {
+    width: 104px;
+  }
+}
+
+/* O horário selecionado permanece explícito quando a pessoa navega no replay. */
+.hud.phone:not(.tv) .clean-header.hudtop:has(.live.replay) {
+  flex-wrap: wrap;
+}
+.hud.phone:not(.tv) .clean-header.hudtop:has(.live.replay) > .status {
+  display: contents;
+}
+.hud.phone:not(.tv) .clean-header.hudtop .live.replay {
+  display: inline-flex;
+  order: 4;
+  flex: 1 0 100%;
+  min-height: 20px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.hud.phone .clean-header.hudtop .live.replay .lw {
+  display: inline;
+}
+
+/* A nota permanece na leitura, com peso menor que a navegação e o mapa. */
+.hud.phone.flow > .aviso {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+/* A seleção de cargo permanece abaixo da fonte durante a rolagem. */
+.hud.phone.flow > .swbar {
+  top: 0;
+}

@@ -1,0 +1,15 @@
+{
+  "liveSeconds": 15,
+  "collectingSeconds": 2,
+  "finishedSeconds": 300,
+  "blockSeconds": 600,
+  "missingSeconds": 600,
+  "trackingSweepSeconds": 45,
+  "hiddenSeconds": 60,
+  "requestTimeoutSeconds": 10,
+  "healthStaleSeconds": 120,
+  "sourceQuietSeconds": 120,
+  "cacheSeconds": 10,
+  "errorSeconds": 30,
+  "sourceTimeoutSeconds": 12
+}

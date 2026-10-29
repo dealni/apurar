@@ -1,0 +1,382 @@
+.feed {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.feed[hidden] {
+  display: none;
+}
+.feedc .hd .ftabs {
+  margin-left: -6px;
+}
+.feed.favs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fv {
+  all: unset;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 6px;
+  margin: 0 -6px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color var(--hover) var(--ease);
+}
+.fv:hover {
+  background: #f7f8f80f;
+}
+.fv:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: -2px;
+}
+.fvn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.fvn b {
+  font: 500 var(--t-body)/1.2 var(--sans);
+  color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fvn span {
+  font: 400 var(--t-micro)/1 var(--sans);
+  color: var(--fg-3);
+}
+.fvv {
+  font: 600 var(--t-body)/1 var(--sans);
+}
+.icon.fav.on {
+  color: #f5c451;
+}
+.feed.over {
+  -webkit-mask-image: linear-gradient(#000 calc(100% - 48px), transparent);
+  mask-image: linear-gradient(#000 calc(100% - 48px), transparent);
+}
+.ev {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 30px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+}
+button.ev {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 30px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color var(--hover) var(--ease);
+}
+button.ev:hover {
+  background: #f7f8f80d;
+}
+button.ev:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--line-3);
+}
+button.ev:first-child {
+  padding-top: 10px;
+  margin-top: -8px;
+}
+.ev + .ev:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+button.ev + .ev:before {
+  left: 8px;
+  right: 8px;
+}
+.evi {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--panel-3);
+  color: var(--fg-2);
+}
+.evi.on {
+  background: color-mix(in oklab, var(--c) 26%, var(--panel-2));
+  color: var(--ct);
+}
+.evi svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.evi svg .fill {
+  fill: currentColor;
+  stroke: none;
+}
+.ev:first-child {
+  padding-top: 0;
+}
+.arr {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.arr1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.arru {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+}
+.arru .uft {
+  height: 18px;
+  min-width: 24px;
+  padding: 0 4px;
+}
+.arru .mais {
+  margin-left: 2px;
+  font: 500 var(--t-micro)/1 var(--sans);
+  color: var(--fg-3);
+}
+.arr2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+}
+.arr2 .par {
+  white-space: nowrap;
+}
+.ev time {
+  font: 500 var(--t-micro)/1 var(--sans);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-3);
+}
+.ev p {
+  font: 400 var(--t-body)/1.4 var(--sans);
+  color: var(--fg-2);
+}
+.ev p b {
+  font-weight: 500;
+  color: var(--fg);
+}
+.ev p,
+.toast p {
+  text-wrap: pretty;
+}
+.ev p b,
+.tk b {
+  white-space: nowrap;
+}
+.stc .kgrow {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.stc .klist {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.krow {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  column-gap: 10px;
+  align-items: center;
+  flex: none;
+  height: 50px;
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  padding: 0 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color var(--hover) var(--ease);
+}
+.krow:hover {
+  background: #f7f8f80d;
+}
+.krow + .krow {
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.krow:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: -2px;
+}
+.krow .uft {
+  min-width: 34px;
+  height: 24px;
+}
+.krow .kn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.krow .kn .nm {
+  font: 500 var(--t-body)/1.2 var(--sans);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.krow .kn small {
+  font: 400 var(--t-micro)/1.2 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.krow .kv {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font: 400 16px/1 var(--serif);
+}
+.krow .kv small {
+  font: 400 var(--t-micro)/1 var(--sans);
+  color: var(--fg-4);
+}
+.krow .rbar {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  width: 34px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--panel-3);
+  overflow: hidden;
+}
+.krow .rbar i {
+  display: block;
+  height: 100%;
+  background: var(--fg-3);
+  transition: width var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.stc.ext .then {
+  margin-top: 2px;
+}
+.uft.zt {
+  min-width: 34px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+.zrow.on {
+  background: #f7f8f817;
+}
+.stc .zhide {
+  display: none;
+}
+.stc .lab .lnk {
+  all: unset;
+  cursor: pointer;
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-2);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line-3);
+}
+.stc .lab .lnk:hover {
+  color: var(--fg);
+}
+.stc .lab .lnk:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.stc .allc {
+  all: unset;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 8px;
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-2);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line-3);
+}
+.stc .allc:hover {
+  color: var(--fg);
+}
+.stc .allc:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.stc.all {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.zl .lab .pager {
+  margin: -8px -6px -8px 0;
+}
+.zl .note.zn {
+  font-size: var(--t-micro);
+  color: var(--fg-4);
+}
+.zl .bfind {
+  position: static;
+  padding: 2px 0 6px;
+  background: none;
+}
+.zl .bfind input {
+  height: 34px;
+  font-size: 14px;
+  line-height: 34px;
+}
+.krow .kv {
+  flex-direction: row;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.then.t1 {
+  margin-top: 10px;
+}
+.tally .tline.t1n {
+  margin-top: -6px;
+  color: var(--fg-3);
+}
+.pcard.scroll .kgrow,
+.pcard.scroll .klist {
+  flex: none;
+  overflow: visible;
+}
+.evg {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--panel-3);
+  color: var(--fg-2);
+}
+.tk .evg {
+  width: 24px;
+  height: 24px;
+}

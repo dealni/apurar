@@ -1,0 +1,2 @@
+# Ferramenta local de qualidade; não é dependência do coletor em produção.
+ruff==0.17.2

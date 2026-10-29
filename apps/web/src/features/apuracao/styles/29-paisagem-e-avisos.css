@@ -1,0 +1,109 @@
+.hud.land {
+  display: grid;
+  grid-template: auto minmax(0, 1fr) auto/minmax(0, 1fr) 320px;
+  gap: 10px;
+  padding: 8px max(16px, env(safe-area-inset-right))
+    max(8px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+}
+.hud.land .hudtop {
+  grid-column: 1/-1;
+  height: 40px;
+}
+.hud.land .mapwrap {
+  grid-column: 1;
+  grid-row: 2;
+  min-height: 0;
+}
+.hud.land .side {
+  grid-column: 2;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+}
+.hud.land .side .pcard {
+  flex: 0 1 auto;
+  max-height: none;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.hud.land .tlbar {
+  grid-column: 1;
+  grid-row: 3;
+}
+.hud.tablet .others {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.hud.tablet .others .crow + .crow {
+  margin-top: 0;
+}
+.aviso {
+  position: absolute;
+  z-index: 7;
+  top: 64px;
+  left: 50%;
+  transform: translate(-50%);
+  width: max-content;
+  max-width: min(560px, calc(100% - 32px));
+  margin: 0;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: #141516f5;
+  border: 1px solid var(--line-2);
+  box-shadow: 0 14px 32px #00000073;
+  font: 400 var(--t-body)/1.4 var(--sans);
+  color: var(--fg);
+  text-align: center;
+  animation: enter 0.3s var(--ease-out) both;
+}
+.hud.phone .aviso {
+  top: 54px;
+}
+@media (max-width: 799px) {
+  .hud.phone:not(.land) .hudtop {
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: 6px;
+  }
+  .hud.phone:not(.land) .status {
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .hud.phone:not(.land) .live .lt {
+    overflow: visible;
+  }
+}
+.hud.phone.shell .hudtop {
+  flex-wrap: nowrap;
+  height: var(--toph);
+  row-gap: 0;
+}
+.hud.phone.shell .status {
+  flex-basis: auto;
+  justify-content: flex-end;
+  gap: 6px;
+}
+@media (max-width: 379px) {
+  .hud.phone:not(.land) .status {
+    gap: 8px;
+  }
+  .hud.phone .status .expill {
+    padding: 6px 9px;
+    gap: 5px;
+  }
+  .hud.phone .vivo {
+    gap: 4px;
+  }
+}
+.hud.phone .status .btn.tvexit {
+  display: inline-flex;
+}
+.card.oops p {
+  font: 400 var(--t-body)/1.45 var(--sans);
+  color: var(--fg-3);
+}

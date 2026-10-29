@@ -1,0 +1,201 @@
+/* Leitura contínua, tablet e paisagem seguem a classificação comum de layout. */
+.frame:has(.exterior-principal.hud.flow) {
+  overflow: visible;
+}
+.hud.exterior-principal.phone.flow {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100dvh;
+  padding: 12px max(var(--m), env(safe-area-inset-left))
+    max(28px, env(safe-area-inset-bottom));
+  overflow: visible;
+}
+.exterior-principal.hud.flow .exterior-header.hudtop {
+  position: relative;
+  inset: auto;
+  flex: none;
+  height: auto;
+}
+.exterior-principal.hud.flow .exterior-workspace {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.exterior-principal.hud.flow
+  .exterior-workspace
+  > :is(.exterior-sidebar, .exterior-detail) {
+  position: relative;
+  inset: auto;
+  display: flex;
+  width: 100%;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+.exterior-principal.hud.flow .exterior-detail {
+  order: 2;
+}
+.exterior-principal.hud.flow .exterior-map-column {
+  position: relative;
+  inset: auto;
+  order: 1;
+  overflow: visible;
+}
+.exterior-principal.hud.flow .exterior-stage {
+  position: relative;
+  inset: auto;
+  height: clamp(240px, calc((100vw - 32px) * 0.94), 560px);
+}
+.exterior-principal.hud.flow .exterior-breadcrumb {
+  position: relative;
+  inset: auto;
+  transform: none;
+  margin: 0 auto 8px;
+}
+.exterior-principal.hud.flow .exterior-map-key {
+  position: static;
+  margin-top: 8px;
+}
+.exterior-principal.hud.flow .exterior-sidebar {
+  order: 0;
+}
+.exterior-principal.hud.flow .exterior-summary {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.exterior-principal.hud.flow .exterior-summary h1 {
+  display: none;
+}
+.exterior-principal.hud.flow .exterior-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 0;
+}
+.exterior-principal.hud.flow .exterior-selectors select {
+  width: 100%;
+  min-width: 0;
+  text-overflow: ellipsis;
+}
+.exterior-principal.hud.phone:is(.tablet, .land, .tv) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  overflow-y: auto;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-header {
+  position: relative;
+  inset: auto;
+  height: auto;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-workspace {
+  position: relative;
+  inset: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 42%);
+  gap: 12px;
+  flex: 1 0 auto;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv)
+  .exterior-workspace
+  > :is(.exterior-detail, .exterior-sidebar) {
+  position: relative;
+  inset: auto;
+  display: flex;
+  width: auto;
+  max-height: none;
+  overflow: visible;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-detail {
+  grid-column: 2;
+  grid-row: 2;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-map-column {
+  position: relative;
+  inset: auto;
+  grid-column: 1;
+  grid-row: 2;
+  min-height: 380px;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-sidebar {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-summary {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-summary h1 {
+  margin: 0 0 12px;
+}
+.exterior-principal.phone:is(.tablet, .land, .tv) .exterior-selectors {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 0;
+}
+.exterior-principal.hud.phone.tablet .exterior-workspace {
+  grid-template-columns: minmax(0, 1fr);
+}
+.exterior-principal.hud.phone.tablet .exterior-detail {
+  grid-column: 1;
+  grid-row: 3;
+}
+.exterior-principal.hud.phone.tablet .exterior-map-column {
+  grid-column: 1;
+  grid-row: 2;
+  min-height: 0;
+}
+.exterior-principal.hud.phone.tablet .exterior-sidebar {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.exterior-principal.phone:is(.tablet, .land) .exterior-stage {
+  position: relative;
+  inset: auto;
+  height: clamp(280px, 52vw, 440px);
+}
+.exterior-principal.phone:is(.tablet, .land) .exterior-breadcrumb {
+  position: relative;
+  inset: auto;
+  transform: none;
+  margin: 0 auto 8px;
+}
+.exterior-principal.phone:is(.tablet, .land) .exterior-map-key {
+  position: static;
+  margin-top: 8px;
+}
+/* Os controles ocupam uma linha própria para preservar os alvos do mapa. */
+.hud.exterior-principal:is(.flow, .tablet, .land) .exterior-stage {
+  box-sizing: content-box;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+.hud.exterior-principal:is(.flow, .tablet, .land) .exterior-stage > .zoomctl {
+  left: auto !important;
+  top: auto !important;
+  right: 0;
+  bottom: 0;
+  transform: none;
+}
+.hud.exterior-principal:is(.flow, .tablet, .land) .exterior-stage > .marks {
+  bottom: 60px;
+  overflow: hidden;
+}

@@ -1,0 +1,228 @@
+.hud.shell {
+  display: block;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+  --toph: 36px;
+  --tabh: calc(50px + env(safe-area-inset-bottom, 0px));
+}
+.hud.shell .hudtop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--toph);
+  padding: 0 8px 0 16px;
+  gap: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: 7;
+  background: var(--bg);
+  overflow: hidden;
+}
+.hud.shell .hudtop .brand {
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 7px;
+  white-space: nowrap;
+}
+.hud.shell .brand b {
+  font-size: 18px;
+}
+.hud.shell .soc,
+.hud.shell .expill,
+.hud.shell .vivo,
+.hud.shell .hudtop .live {
+  display: none;
+}
+.hud.shell .hudtop .status {
+  order: 2;
+  flex: none;
+  margin-left: 0;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+.hud.shell .hudtop .sbtn {
+  order: 3;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-left: 0;
+}
+.hud.shell .sim {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+.hud.shell .aviso {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: calc(var(--toph) + var(--rbh) + 8px);
+  z-index: 6;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  font: 500 var(--t-label)/1.3 var(--sans);
+  text-align: center;
+}
+.hud.shell .rbp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--toph);
+  height: var(--rbh);
+  z-index: 6;
+  box-sizing: border-box;
+  padding: 6px 16px 0;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  transition: height 0.24s var(--ease-out);
+}
+.hud.shell .rbp-head {
+  margin: 0;
+  height: 22px;
+  min-height: 22px;
+  text-align: center;
+  font: 400 16px/22px var(--serif);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rbp-head .ln {
+  display: inline;
+}
+.rbp-head .ln + .ln:before {
+  content: ' ';
+}
+.rbp-who {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+}
+.rbp-c {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.rbp-c.r {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.rbp-nm {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.rbp-nm b {
+  font: 600 15px/1 var(--sans);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rbp-nm .pm {
+  font: 500 11px/1 var(--sans);
+}
+.rbp .rb-bar {
+  height: 28px;
+  flex: none;
+}
+.rbp .rb-track {
+  border-radius: 6px;
+}
+.rbp .rb-track > i.l {
+  padding-left: 10px;
+}
+.rbp .rb-track > i.r {
+  padding-right: 10px;
+}
+.rbp .rb-track b {
+  font-size: 17px;
+}
+.rbp .rb-track b small {
+  font-size: 11px;
+}
+.rbp .rb-v {
+  margin: 0 8px;
+  font-size: 11px;
+}
+.rbp-n {
+  flex: none;
+  font: 600 13px/1 var(--sans);
+  margin: 0 8px;
+  white-space: nowrap;
+}
+.rbp .rb-50 {
+  top: -4px;
+  bottom: -4px;
+  width: 1px;
+  margin-left: 0;
+  box-shadow: none;
+  opacity: 0.9;
+}
+.rbp .rb-fire:after {
+  display: none;
+}
+.rbp .rb-fire i {
+  display: none;
+}
+.rbp-foot {
+  position: relative;
+  height: 20px;
+  flex: none;
+}
+.rbp .rb-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: #3dd68c2e;
+  overflow: hidden;
+}
+.rbp .rb-foot > i {
+  display: block;
+  height: 100%;
+  background: var(--apur);
+  transition: width var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.rbp .rb-apl {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: min(calc(var(--p) * 100%), 100%);
+  min-width: max-content;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 4px;
+  font: 500 11px/1 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+  transition: width var(--tb, var(--tw, 0.7s)) var(--run-ease);
+}
+.rbp .rb-apl b {
+  color: var(--apur);
+  font-weight: 600;
+}
+.rbp.compact {
+  padding-top: 8px;
+  gap: 4px;
+}

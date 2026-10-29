@@ -1,0 +1,299 @@
+.fcnav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.fcdot {
+  all: unset;
+  cursor: pointer;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: #f7f8f840;
+  transition:
+    width 0.22s var(--ease),
+    background-color var(--hover) var(--ease);
+}
+.fcdot.on {
+  width: 16px;
+  background: var(--fg);
+}
+.fcarr {
+  all: unset;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font: 500 16px/1 var(--sans);
+  color: var(--fg-2);
+  transition:
+    color var(--hover) var(--ease),
+    background-color var(--hover) var(--ease);
+}
+.fcarr:hover {
+  color: var(--fg);
+  background: #f7f8f812;
+}
+.fcdot:focus-visible,
+.fcarr:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+.fcbox {
+  flex: 0 1 auto;
+  min-height: 0;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+.fcp {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+.fct {
+  flex: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.fct > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.fcv {
+  flex: 0 1 112px;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+}
+.fcv.nf {
+  flex-basis: 139px;
+}
+.fcv > * {
+  flex: 1 1 0;
+  min-height: 0;
+}
+.fct .lg {
+  flex-wrap: nowrap;
+  gap: 12px;
+  white-space: nowrap;
+}
+.fch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-2);
+}
+.fch span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.fcmk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.fcmr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.fcml {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 10px;
+}
+.fcsrc {
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+.fcsrc.logo {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+.fcsrc.logo svg {
+  height: 14px;
+  width: auto;
+  max-width: 76px;
+  display: block;
+}
+.fcsrc.kalshi {
+  color: #00dd94;
+}
+.fcsrc.kalshi svg {
+  height: 11px;
+}
+.fcsrc.polymarket {
+  color: var(--fg);
+}
+.fcsrc.polymarket svg {
+  height: 13px;
+}
+.fcml b {
+  font: 600 18px/1 var(--sans);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.fcml b.r {
+  text-align: right;
+}
+.fcbar {
+  position: relative;
+}
+.fcband {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  border-radius: 3px;
+  background: #f7f8f84d;
+  box-shadow: inset 0 0 0 1px #f7f8f88c;
+}
+.fcbig {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.fcnums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.fcnums span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+.fcnums b {
+  font: 500 24px/1 var(--sans);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.fcnums small {
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+.fcchart svg {
+  display: block;
+}
+.fcmid {
+  stroke: #f7f8f847;
+  stroke-dasharray: 2 3;
+}
+.fcpt circle {
+  opacity: 0.42;
+}
+.fcpt:hover circle {
+  opacity: 1;
+}
+.fctrend {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.fc50 {
+  stroke: #f7f8f880;
+  stroke-dasharray: 2 3;
+}
+.fcmedl {
+  stroke: var(--fg);
+  stroke-width: 1.5;
+}
+.fcticks text {
+  font: 400 var(--t-micro)/1 var(--sans);
+  fill: var(--fg-3);
+}
+.fcwait {
+  margin: 0;
+  font: 400 var(--t-body)/1.45 var(--sans);
+  color: var(--fg-3);
+}
+.fcfoot {
+  flex: none;
+  height: 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 400 var(--t-micro)/15px var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fcfoot.pjf {
+  display: block;
+  height: auto;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+}
+.fcax {
+  justify-content: space-between;
+}
+.fcinfo {
+  all: unset;
+  flex: none;
+  cursor: help;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px #f7f8f84d;
+  font: 600 9px/1 var(--sans);
+  color: var(--fg-2);
+}
+.fcinfo:hover {
+  color: var(--fg);
+  box-shadow: inset 0 0 0 1px #f7f8f899;
+}
+.fcinfo:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+.hud.flow .fc .fcbox {
+  flex: none;
+}
+.hud.flow .fcv > .plot {
+  flex: 1 1 0;
+  height: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fcdot,
+  .fcarr {
+    transition: none;
+  }
+}
+.hud.flow .feedc .feed {
+  max-height: min(70vh, 560px);
+}
+.hud.flow .search {
+  position: fixed;
+}
+.hud.flow .tl .track,
+.marks.pany .mk {
+  touch-action: pan-y;
+}

@@ -1,0 +1,7 @@
+{
+  "FE BRASIL": {"n":101,"nome":"Federação Brasil da Esperança","partidos":["PT","PCDOB","PV"],"cor":"#EE2D35","txt":"#F14242","deep":"#8E0011","on":"#0F0E0D"},
+  "PSDB CIDADANIA": {"n":100,"nome":"Federação PSDB Cidadania","partidos":["PSDB","CIDADANIA"],"cor":"#3994FF","deep":"#014E9A","on":"#0F0E0D"},
+  "PSOL REDE": {"n":102,"nome":"Federação PSOL Rede","partidos":["PSOL","REDE"],"cor":"#FAF45A","deep":"#7A7505","on":"#0F0E0D"},
+  "RENOVAÇÃO SOLIDÁRIA": {"n":103,"nome":"Federação Renovação Solidária","partidos":["PRD","SOLIDARIEDADE"],"cor":"#14938D","deep":"#005350","on":"#0F0E0D"},
+  "UNIÃO PROGRESSISTA": {"n":104,"nome":"Federação União Progressista","partidos":["UNIÃO","PP"],"cor":"#26C4FF","deep":"#036687","on":"#0F0E0D"}
+}

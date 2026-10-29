@@ -1,0 +1,18 @@
+[
+{"arcs":[[-14197,-14525,-14584,-14243]],"type":"Polygon","properties":{"id":"1600055","n":"Serra do Navio","uf":"AP","p":4673}},
+{"arcs":[[[-13603,14403,-14246,14404,-14276,-14237]],[[14405]],[[14406]]],"type":"MultiPolygon","properties":{"id":"1600105","n":"Amapá","uf":"AP","p":7943}},
+{"arcs":[[-14196,14521,14522,-14324,14523,14524]],"type":"Polygon","properties":{"id":"1600154","n":"Pedra Branca do Amapari","uf":"AP","p":12847}},
+{"arcs":[[14241,14242,14243,14244,14245]],"type":"Polygon","properties":{"id":"1600204","n":"Calçoene","uf":"AP","p":10612}},
+{"arcs":[[-13604,14236,14237,-14193]],"type":"Polygon","properties":{"id":"1600212","n":"Cutias","uf":"AP","p":4461}},
+{"arcs":[[-13601,14192,14193,14194,14195,14196,14197]],"type":"Polygon","properties":{"id":"1600238","n":"Ferreira Gomes","uf":"AP","p":6666}},
+{"arcs":[[-13547,14168,14169]],"type":"Polygon","properties":{"id":"1600253","n":"Itaubal","uf":"AP","p":5599}},
+{"arcs":[[-13438,14320,14321,14322,14323,14324]],"type":"Polygon","properties":{"id":"1600279","n":"Laranjal do Jari","uf":"AP","p":35114}},
+{"arcs":[[-13548,-14170,14273,-13572,14274,-14194,-14238,14275,14276]],"type":"Polygon","properties":{"id":"1600303","n":"Macapá","uf":"AP","p":442933}},
+{"arcs":[[-13134,-13439,-14325,-14523,-14717,-13570,14917]],"type":"Polygon","properties":{"id":"1600402","n":"Mazagão","uf":"AP","p":21924}},
+{"arcs":[[-14244,14583,-14524,-14323,14584]],"type":"Polygon","properties":{"id":"1600501","n":"Oiapoque","uf":"AP","p":27482}},
+{"arcs":[[-13571,14716,-14522,-14195,-14275]],"type":"Polygon","properties":{"id":"1600535","n":"Porto Grande","uf":"AP","p":17848}},
+{"arcs":[[-13602,-14198,-14242,-14404]],"type":"Polygon","properties":{"id":"1600550","n":"Pracuúba","uf":"AP","p":3803}},
+{"arcs":[[13568,13569,13570,13571]],"type":"Polygon","properties":{"id":"1600600","n":"Santana","uf":"AP","p":107618}},
+{"arcs":[[13600,13601,13602,13603]],"type":"Polygon","properties":{"id":"1600709","n":"Tartarugalzinho","uf":"AP","p":12945}},
+{"arcs":[[-13133,13436,13437,13438]],"type":"Polygon","properties":{"id":"1600808","n":"Vitória do Jari","uf":"AP","p":11291}}
+]

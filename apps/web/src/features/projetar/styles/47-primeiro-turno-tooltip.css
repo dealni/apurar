@@ -1,0 +1,31 @@
+.tip-first-round {
+  border-top: 1px solid var(--apurar-theme-border);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.tip-first-round h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.tip-first-round-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.tip-first-round-row > .tn {
+  text-align: right;
+}
+.tip-first-round-row small {
+  display: block;
+  color: var(--apurar-theme-secondary);
+  font-size: 11px;
+}
+.tip-first-round .note {
+  margin: 8px 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+}

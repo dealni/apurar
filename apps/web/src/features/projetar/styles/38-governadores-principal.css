@@ -1,0 +1,488 @@
+@import "./38-governadores-responsivo.css";
+/* Governadores compartilha cabeçalho, cards e tipografia com Presidente. */
+.governadores-principal.hud {
+  --gov-top: 72px;
+  --gov-side: var(--lw, 336px);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  color: var(--fg);
+  background: radial-gradient(
+    110% 90% at 55% 50%,
+    #101114,
+    #08090a 58%,
+    #050607
+  );
+}
+.gov-workspace {
+  position: absolute;
+  inset: var(--gov-top) 0 0;
+  min-height: 0;
+}
+.gov-workspace > .gov-sidebar,
+.gov-workspace > .gov-detail {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  width: var(--gov-side);
+  max-height: calc(100% - 20px);
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  container-type: normal;
+  z-index: 3;
+}
+.gov-workspace > .gov-sidebar {
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.gov-workspace > .gov-detail {
+  right: 20px;
+}
+.gov-sidebar > .card,
+.gov-detail.card {
+  padding: var(--pad);
+}
+.gov-map-column,
+.gov-stage {
+  position: absolute;
+  inset: 0;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.gov-stage canvas.map {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  touch-action: none;
+}
+.gov-stage canvas.prev,
+.gov-stage canvas.hov,
+.gov-stage canvas.fx {
+  pointer-events: none;
+}
+.gov-summary .kick {
+  margin-bottom: 12px;
+  color: var(--fg-3);
+  font: 500 var(--t-label)/1.3 var(--sans);
+}
+.gov-summary > .note {
+  margin-top: 12px;
+}
+.gov-races > .lab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--fg-3);
+  font: 500 var(--t-label)/1.3 var(--sans);
+}
+.gov-workspace .sh h2 {
+  font: 600 var(--t-name)/1.3 var(--sans);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.gov-races {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+.gov-races > h2,
+.gov-races > .hd {
+  margin-bottom: 10px;
+}
+.gov-race.krow {
+  min-height: 56px;
+  height: auto;
+  padding-block: 10px;
+}
+.gov-race.krow.active,
+.gov-race.krow[aria-pressed="true"] {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.gov-race.krow .kn small {
+  white-space: normal;
+  line-height: 1.35;
+}
+.gov-race.krow .kv {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 110px;
+}
+.gov-candidate-legend i {
+  flex: none;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.gov-map-column .gov-breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2 * var(--gov-side) - 64px);
+  z-index: 2;
+}
+.gov-legend,
+.gov-replay {
+  position: absolute;
+  left: calc(var(--gov-side) + 40px);
+  right: calc(var(--gov-side) + 40px);
+  bottom: 44px;
+  z-index: 2;
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  pointer-events: none;
+}
+.gov-replay {
+  bottom: 16px;
+}
+.gov-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gov-detail .official-totals,
+.gov-summary .official-totals {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  gap: 8px;
+}
+.gov-candidate-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--fg-3);
+  font: 400 var(--t-micro)/1.3 var(--sans);
+}
+.gov-candidate-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.gov-selected {
+  display: none;
+}
+.frame:has(.governadores-principal) {
+  overflow: hidden;
+}
+@media (max-width: 1299px) {
+  .governadores-principal.hud {
+    --gov-side: 280px;
+  }
+}
+.governadores-principal.hud.phone.shell {
+  --toph: 48px;
+  --tabh: calc(50px + env(safe-area-inset-bottom, 0px));
+  --gov-top: 96px;
+  padding: 0;
+  gap: 0;
+}
+.governadores-principal.phone.shell .gov-office-selector {
+  position: absolute;
+  inset: var(--toph) 0 auto;
+  z-index: 7;
+  height: 48px;
+  padding: 4px 16px;
+  background: var(--bg);
+}
+.governadores-principal.phone .gov-office-selector .switch {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+.governadores-principal.phone .gov-office-selector .switch button {
+  flex: 1;
+}
+.governadores-principal.phone .gov-workspace {
+  bottom: var(--tabh);
+}
+.governadores-principal.phone .gov-workspace > .gov-sidebar,
+.governadores-principal.phone .gov-workspace > .gov-detail {
+  display: none;
+  inset: 0;
+  width: auto;
+  max-height: none;
+  padding: 12px 16px 20px;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 0;
+  background: var(--bg);
+}
+.governadores-principal.phone .gov-map-column {
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+}
+.governadores-principal.phone[data-tab="mapa"] .gov-map-column {
+  visibility: visible;
+  pointer-events: auto;
+}
+.governadores-principal.phone[data-tab="explorar"] .gov-sidebar {
+  display: flex;
+}
+.governadores-principal.phone[data-tab="resultados"] .gov-detail {
+  display: flex;
+}
+.governadores-principal.phone .gov-map-column .gov-breadcrumb {
+  top: 8px;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  min-height: 44px;
+}
+.governadores-principal.phone .gov-map-column > .note {
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.governadores-principal.phone .gov-map-column .gov-replay {
+  display: none;
+}
+.governadores-principal.phone:has(.gov-selected) .gov-map-column > .note {
+  bottom: 88px;
+}
+.governadores-principal.phone .gov-selected {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 14px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--fg);
+  text-align: left;
+  font: 500 var(--t-body)/1.3 var(--sans);
+}
+.gov-selected b {
+  color: var(--fg-3);
+  font-size: var(--t-label);
+}
+.governadores-principal.phone.shell > .tabbar {
+  display: flex;
+}
+@media (pointer: coarse), (max-width: 799px) {
+  .governadores-principal :is(.btn, .sbtn, .icon, .switch button) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+.gov-mobile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gov-result {
+  min-width: 0;
+}
+.gov-result .official-totals {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.governadores-principal.phone .gov-mobile-actions .btn {
+  height: auto;
+  min-height: 44px;
+  padding-block: 10px;
+  white-space: normal;
+}
+/* Tablet e paisagem mantêm mapa e resultado disponíveis no mesmo percurso. */
+.governadores-principal.phone:is(.tablet, .land, .tv) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  overflow-y: auto;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-header {
+  position: relative;
+  inset: auto;
+  height: auto;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-office-selector {
+  position: relative;
+  inset: auto;
+  flex: none;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-workspace {
+  position: relative;
+  inset: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 42%);
+  gap: 12px;
+  flex: 1 0 auto;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv)
+  .gov-workspace
+  > .gov-detail,
+.governadores-principal.phone:is(.tablet, .land, .tv)
+  .gov-workspace
+  > .gov-sidebar {
+  display: flex;
+  position: relative;
+  inset: auto;
+  width: auto;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-detail {
+  grid-column: 2;
+  grid-row: 1;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-map-column {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  inset: auto;
+  min-height: 380px;
+  visibility: visible;
+  pointer-events: auto;
+}
+.governadores-principal.phone:is(.tablet, .land, .tv) .gov-sidebar {
+  grid-column: 1 / -1;
+}
+.governadores-principal.hud:has(.gov-scoreboard) {
+  --gov-top: 212px;
+}
+.governadores-principal .gov-scoreboard.rbwrap {
+  position: absolute;
+  inset: 72px 20px auto;
+  height: 124px;
+  z-index: 4;
+}
+.governadores-principal .gov-scoreboard > .rbanner {
+  height: 100%;
+}
+
+.gov-filter-title {
+  margin: 0 0 14px;
+  font: 600 var(--t-name)/1.3 var(--sans);
+  letter-spacing: -0.02em;
+}
+.gov-map-context {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.gov-map-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+}
+.gov-map-title h1 {
+  margin: 0;
+  font: 600 18px/1.3 var(--sans);
+  letter-spacing: -0.025em;
+}
+.gov-map-title > span {
+  color: var(--fg-3);
+  font: 400 var(--t-label)/1.4 var(--sans);
+}
+.gov-map-source.note {
+  margin: 0;
+  color: var(--fg-3);
+  font-size: var(--t-micro);
+  overflow-wrap: anywhere;
+}
+.gov-location,
+.gov-map-help {
+  min-width: 0;
+  color: var(--fg-3);
+  font: 400 var(--t-label)/1.4 var(--sans);
+}
+.gov-location {
+  margin-top: 2px;
+  border-block: 1px solid var(--line);
+}
+.gov-location > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+}
+.gov-location > summary::-webkit-details-marker {
+  display: none;
+}
+.gov-location > summary > span:first-child {
+  min-width: 0;
+  color: var(--fg);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.gov-location-action {
+  flex: none;
+  color: var(--fg-3);
+  font-size: var(--t-micro);
+}
+.gov-location-action::after {
+  content: " +";
+}
+.gov-location[open] .gov-location-action::after {
+  content: " −";
+}
+.gov-location .gov-selectors {
+  padding-bottom: 12px;
+}
+.gov-map-followup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.gov-map-followup > .btn,
+.gov-map-help > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+.gov-map-followup > .btn {
+  flex: none;
+  height: auto;
+  text-decoration: none;
+}
+.gov-map-help {
+  flex: 1 1 130px;
+}
+.gov-map-help > summary {
+  cursor: pointer;
+  justify-content: flex-end;
+  list-style-position: inside;
+}
+.gov-map-help[open] {
+  flex-basis: 100%;
+}
+.gov-map-help[open] > summary {
+  justify-content: flex-start;
+}
+.governadores-principal summary:focus-visible {
+  outline: 2px solid var(--apurar-theme-focus);
+  outline-offset: 2px;
+}

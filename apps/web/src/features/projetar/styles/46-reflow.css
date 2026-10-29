@@ -1,0 +1,84 @@
+/* Sem candidaturas, a faixa usa a largura inteira para o contexto da disputa. */
+.gov-scoreboard .rbanner:not(:has(.rb-face)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.gov-scoreboard .rb-top:not(:has(.rb-nm)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.gov-scoreboard .rb-head {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.gov-banner-races {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* A faixa cresce com o texto e reserva sua própria linha antes do mapa. */
+.governadores-principal.hud:not(.phone):not(.tv):has(.gov-scoreboard) {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 20px 20px;
+}
+.governadores-principal.hud:not(.phone):not(.tv):has(.gov-scoreboard)
+  > :is(.hudtop, .gov-scoreboard, .gov-workspace) {
+  position: relative;
+  inset: auto;
+  height: auto;
+  min-width: 0;
+}
+.governadores-principal.hud:not(.phone):not(.tv):has(.gov-scoreboard)
+  .gov-workspace
+  > .gov-sidebar {
+  left: 0;
+}
+.governadores-principal.hud:not(.phone):not(.tv):has(.gov-scoreboard)
+  .gov-workspace
+  > .gov-detail {
+  right: 0;
+}
+.governadores-principal .gov-scoreboard > .rbanner {
+  min-height: 124px;
+}
+
+/* A fonte já tem uma faixa própria; no cabeçalho ela cede espaço às ações. */
+.hud:not(.phone):not(.tv) .hudtop {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+.hud:not(.phone):not(.tv) .hudtop > .status {
+  min-width: 0;
+  max-width: 100%;
+}
+.hud:not(.phone):not(.tv) .hudtop .live {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.hud:not(.phone):not(.tv) .hudtop .live .lt {
+  flex-shrink: 1;
+  min-width: 0;
+}
+.gov-scoreboard .rbanner:not(:has(.rb-face)) {
+  padding-block: 16px;
+}
+.hud .gov-scoreboard .rbanner:not(:has(.rb-face)) .rb-mid > .note {
+  position: static;
+}
+.hud.phone :is(.gov-office-selector, .exterior-office-selector) .switch button {
+  min-width: 0;
+  height: auto;
+  min-height: 44px;
+  padding-block: 6px;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.hud :is(.gov-result, .exterior-result) .official-totals {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
+}
+.hud :is(.gov-result, .exterior-result) .official-totals .v {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}

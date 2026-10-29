@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "origin": "captura pública de terceiros + apuracao + IBGE Malha Municipal 2025 (docs/PROVENIENCIA.md) + tema escuro local (referência visual) + Inter (OFL-1.1) + marca derivada ArpoFlow + retratos TSE do segundo turno",
+  "policy": "Dados JSON serializados de referência não são funções nem fonte executável e não têm limite físico de 500 linhas. Arquivos JS gerados continuam sujeitos a AST e tamanho. Integridade exige path, hash, bytes e contagem da versão incorporada; adaptações e remoções são documentadas em docs/PROVENIENCIA.md e docs/LIMPEZA-LEGADO-2026-10-25.md.",
+  "groups": [
+    {
+      "path": "apps/web/public",
+      "source": "public (derivado no Apurar: acervo histórico, Inter OFL-1.1, marca derivada ArpoFlow e 14 retratos TSE; 25/10/2026)",
+      "exclusions": ["_headers"],
+      "sha256": "7a1332aa666120a428e7ef774ee9af4fd67b41950fb1dfc13e1100f8cee550f3",
+      "files": 6903,
+      "bytes": 84247794
+    },
+    {
+      "path": "apps/web/src/data/generated",
+      "source": "src/data/generated",
+      "files": 128,
+      "bytes": 2144795,
+      "sha256": "6e7e5cb9685574b788b1a824b2b02f17df78a777e3045a60b61770338cf922a0"
+    },
+    {
+      "path": "apps/web/src/features/apuracao",
+      "source": "src/features/apuracao (derivado no Apurar: histórico e comparações preservados; design tema escuro, acessibilidade Apple HIG, marca derivada ArpoFlow, barra superior de arquivo e atalhos compartilhados e revisões responsiva e clean com prioridade no mapa de 25/10/2026)",
+      "sha256": "0b82e92c99a700c92dad1b8f562394529a55366969613c3aed841ca94f65cb34",
+      "files": 297,
+      "bytes": 1227707
+    },
+    {
+      "path": "apps/web/src/data/official-geography-2025",
+      "source": "IBGE/2025/apurar-derived",
+      "sha256": "47073829dd2d1eb797e23215d66de1ad00aa68310895d71eaf946304e990af7b",
+      "files": 64,
+      "bytes": 2881987,
+      "provenance": "apps/web/src/data/official-geography-2025/provenance.json"
+    }
+  ],
+  "singleFiles": [
+    {
+      "path": "apps/web/src/integration/municipality-ids.json",
+      "source": "https://resultados.tse.jus.br/oficial/ele2026/6258/config/mun-e006258-cm.json (docs/FONTE-TSE-2026.md)",
+      "sha256": "60cd4d90de46dc504eaf2a4417bb2c35f5d8db38cbd395fa8b0bf7d0d007248d",
+      "bytes": 116993,
+      "records": 5571,
+      "kind": "municipality-id-map"
+    },
+    {
+      "path": "apps/web/1turno/index.html",
+      "source": "captura pública/1turno/index.html (adaptado: metadados, canonical, arquivo histórico, recuperação sem JavaScript e remoção comercial de 25/10/2026); fonte local Inter e tema tema escuro; marca derivada ArpoFlow e cartão social local; entrada independente para chat público do Apurar de 25/10/2026; entrada do chat removida no encerramento de 29/10/2026",
+      "kind": "captured-source",
+      "sha256": "9a4e6025a161a7398b3c1c2f4086189a5eb4810001c5c2501a144a5dbd713d18",
+      "bytes": 2547
+    },
+    {
+      "path": "services/collector/resources/runtime-data.zip",
+      "source": "apuracao: cadastro+prior+manifest (services/collector/dataset-manifest.json)",
+      "kind": "captured-source",
+      "sha256": "dc6c7640ae453a66c7d76ece551f0c13f60cda9506077e86eb47209964526b05",
+      "bytes": 311013
+    }
+  ]
+}

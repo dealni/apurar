@@ -1,0 +1,167 @@
+/* Legibilidade e interação seguem Accessibility e Typography da Apple HIG. */
+.hud {
+  --accent: var(--apurar-theme-accent);
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --panel-2: var(--apurar-theme-panel);
+  --panel-3: var(--apurar-theme-panel-raised);
+  --glass: color-mix(in srgb, var(--apurar-theme-panel) 96%, transparent);
+  --fg-4: var(--apurar-theme-muted);
+}
+.hud :is(.card, .rbanner, .pcard) {
+  border-radius: 16px;
+}
+.hud :is(.btn, .sbtn, .sim, .sh-find) {
+  border-radius: 10px;
+}
+.hud .card > .hd h3 {
+  font-weight: 600;
+}
+.hud :is(.about, .sbox, .candpick) {
+  border-radius: 18px;
+}
+.hud .about {
+  padding: 20px;
+}
+.hud .about p {
+  line-height: 1.65;
+}
+.hud .sin:focus-within {
+  border-bottom-color: var(--apurar-theme-focus);
+}
+.hud :is(.btn, .sbtn, .sim, .icon):active:not(:disabled) {
+  background-color: var(--panel-3);
+  border-color: var(--apurar-theme-focus);
+}
+.hud :is(button, a, [tabindex]):focus-visible {
+  outline: 2px solid var(--apurar-theme-focus);
+  outline-offset: 2px;
+}
+.hud :is(.candpick button, .srow, .tabbar button):focus-visible {
+  outline-offset: -3px;
+}
+/* A barra reaparece onde o conteúdo rola: não esconde a possibilidade de leitura. */
+.hud :is(.sres, .candpick, .about, .sh-pane, .bs-body.scroll, .pcard.scroll, .allp) {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--line-3) transparent;
+}
+.hud :is(.sres, .candpick, .about, .sh-pane, .bs-body.scroll, .pcard.scroll, .allp)::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 6px;
+}
+.hud ::-webkit-scrollbar-thumb {
+  background: var(--line-3);
+  border-radius: 8px;
+}
+.hud.flow {
+  --t-body: 14px;
+  --t-label: 13px;
+  --t-micro: 12px;
+  --gap: 16px;
+  gap: 16px;
+}
+.hud.flow .swbar {
+  background: linear-gradient(var(--bg) 78%, transparent);
+}
+.hud.flow :is(.hero .sub, .hero .votes, .note, .apurar-projection .pj-note) {
+  line-height: 1.55;
+}
+.hud.flow .apurar-projection {
+  font-size: 13px;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.hud.flow .apurar-projection .pj-note {
+  font-size: 12px;
+}
+.hud.flow .apurar-projection .pj-row {
+  padding-block: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.hud.flow .reg {
+  padding-block: 10px;
+}
+.hud.flow :is(.card > .hd, .lh) {
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+.hud.flow .card > .hd .aside {
+  white-space: normal;
+}
+@media (pointer: coarse), (max-width: 799px) {
+  .hud :is(.upto, .others .crow.clk) {
+    box-sizing: border-box;
+    min-height: 44px;
+  }
+  .hud .upto {
+    display: inline-flex;
+    align-items: center;
+    margin-block: 0;
+  }
+  .hud :is(.btn, .sbtn, .sim, .candpick button, .switch button, .seg2 button, .crumbs button, .scancel, .hero .allc, .hero .kick .lnk) {
+    box-sizing: border-box;
+    min-height: 44px;
+  }
+  .hud :is(.btn, .sbtn, .icon, .tl .play) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .hud :is(.switch button, .seg2 button) {
+    height: auto;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hud :is(.hero .allc, .hero .kick .lnk) {
+    display: inline-flex;
+    align-items: center;
+  }
+  .hud :is(.tl, .tl .track) {
+    min-height: 44px;
+  }
+  .hud .crumbs {
+    height: auto;
+    min-height: 46px;
+  }
+  .hud .strip {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .hud .strip .tile {
+    height: 44px;
+  }
+  .hud .flags button {
+    min-width: 44px;
+    min-height: 44px;
+    place-items: center;
+  }
+  .hud.shell {
+    --toph: 48px;
+  }
+  .hud.shell:has(.aviso) {
+    --toph: 88px;
+  }
+  .hud.shell .hudtop,
+  .hud.phone.shell .hudtop {
+    height: 48px;
+  }
+  .hud.shell .aviso {
+    top: 48px;
+  }
+  .hud.shell .sh-tl {
+    height: 58px;
+  }
+}
+@media (prefers-contrast: more) {
+  .hud {
+    --line: #717c8f;
+    --line-2: #8c97aa;
+    --fg-3: #dce1e9;
+    --fg-4: #dce1e9;
+    --glass: var(--panel);
+  }
+  .hud :is(.btn, .sbtn, .switch, .seg2, .card, .rbanner, .pcard) {
+    border-color: var(--line-2);
+  }
+}

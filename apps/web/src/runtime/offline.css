@@ -1,0 +1,13 @@
+.captura-local {
+  position: fixed;
+  bottom: 4px;
+  left: 4px;
+  z-index: 99999;
+  padding: 4px 8px;
+  background: #111;
+  color: #eee;
+  font: 11px sans-serif;
+  border-radius: 5px;
+  max-width: 90vw;
+  pointer-events: none;
+}

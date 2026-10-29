@@ -1,0 +1,73 @@
+{
+  "originalApplication": "/1turno/assets/app.6f8ec57fe2.js",
+  "originalBytes": 372282,
+  "renamedBindings": [
+    {
+      "oldName": "Ot",
+      "newName": "h"
+    },
+    {
+      "oldName": "Kt",
+      "newName": "render"
+    },
+    {
+      "oldName": "P",
+      "newName": "useState"
+    },
+    {
+      "oldName": "ut",
+      "newName": "useEffect"
+    },
+    {
+      "oldName": "B",
+      "newName": "useRef"
+    },
+    {
+      "oldName": "he",
+      "newName": "useMemo"
+    },
+    {
+      "oldName": "Ve",
+      "newName": "useLayoutEffect"
+    },
+    {
+      "oldName": "xe",
+      "newName": "useErrorBoundary"
+    },
+    {
+      "oldName": "o",
+      "newName": "html"
+    },
+    {
+      "oldName": "Vd",
+      "newName": "ApuracaoApp"
+    },
+    {
+      "oldName": "Kc",
+      "newName": "mountApuracao"
+    },
+    {
+      "oldName": "Td",
+      "newName": "TopBars"
+    },
+    {
+      "oldName": "Ld",
+      "newName": "AccessDialog"
+    },
+    {
+      "oldName": "P1",
+      "newName": "MunicipalityResult"
+    },
+    {
+      "oldName": "Wr",
+      "newName": "loadMunicipalityResult"
+    }
+  ],
+  "cssBlocks": 1,
+  "modules": {
+    "Geo": "geography",
+    "Streets": "streets",
+    "Sim": "simulation",
+    "Feed": "feed"
+  }
+}

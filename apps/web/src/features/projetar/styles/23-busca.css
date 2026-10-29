@@ -1,0 +1,211 @@
+/* O painel fixo cria contexto próprio; a busca precisa cobrir atalhos externos. */
+.frame:has(.search),
+.hud:has(.search) {
+  z-index: 100;
+}
+.search {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 96px 16px 16px;
+  background: #08090acc;
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: fade 0.2s var(--ease) both;
+}
+.sbox {
+  width: 560px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--apurar-theme-panel-raised);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  box-shadow: 0 24px 80px #000a;
+  overflow: hidden;
+  animation: enter 0.32s var(--ease-out) both;
+}
+.sin {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--fg-3);
+}
+.sin input {
+  all: unset;
+  flex: 1;
+  min-width: 0;
+  font: 400 17px/1.2 var(--sans);
+  color: var(--fg);
+}
+.sin input::placeholder {
+  color: var(--fg-4);
+}
+.scancel {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  height: 44px;
+  padding: 0 4px 0 8px;
+  font: 500 var(--t-body)/44px var(--sans);
+  color: var(--fg-2);
+}
+.sres {
+  padding: 6px;
+  min-height: 0;
+  max-height: min(420px, calc(100dvh - 230px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+@media (pointer: coarse) {
+  .sres {
+    max-height: min(420px, calc(100dvh - 230px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+.sgroup {
+  padding: 8px 10px 4px;
+  font: 500 var(--t-micro)/1 var(--sans);
+  color: var(--fg-4);
+}
+.srow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.srow[aria-selected="true"] {
+  background: var(--panel-3);
+}
+.srow .nm {
+  font: 500 var(--t-body)/1.4 var(--sans);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.srow .sub {
+  font: 400 var(--t-label)/1.3 var(--sans);
+  color: var(--fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sempty {
+  padding: 18px 12px;
+  font: 400 var(--t-body)/1.4 var(--sans);
+  color: var(--fg-3);
+}
+.sfoot {
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--line);
+  font: 500 var(--t-micro)/1 var(--sans);
+  color: var(--fg-4);
+}
+@media (pointer: coarse) {
+  .sfoot,
+  .sin kbd,
+  .srow kbd {
+    display: none;
+  }
+  .scancel {
+    display: block;
+  }
+}
+.hud.intro .col.l > .card {
+  animation-delay: 0.45s;
+}
+.hud.intro .col.l > .card + .card {
+  animation-delay: 0.56s;
+}
+.hud.intro .col.r > .card {
+  animation-delay: 0.65s;
+}
+.hud.intro .col.r > .card + .card {
+  animation-delay: 0.76s;
+}
+.hud.intro .maptop,
+.hud.intro .mapleg,
+.hud.intro .tlbar {
+  animation: enter 0.6s var(--ease-out) 0.9s both;
+}
+
+.sin:focus-within {
+  border-bottom-color: var(--line-3);
+}
+.scancel {
+  border-radius: 6px;
+}
+.scancel:hover {
+  color: var(--fg);
+  background: var(--panel-3);
+}
+.scancel:focus-visible {
+  outline: 2px solid var(--apurar-theme-focus);
+  outline-offset: 2px;
+}
+.srow[aria-disabled="true"] {
+  cursor: default;
+  color: var(--fg-3);
+}
+@media (max-width: 600px) {
+  .search {
+    padding: 56px 12px 16px;
+  }
+  .sin {
+    gap: 8px;
+    padding: 0 12px;
+  }
+  .sin input {
+    font-size: 16px;
+  }
+  .sin > kbd {
+    display: none;
+  }
+  .srow {
+    min-height: 52px;
+    gap: 10px;
+  }
+  .sres {
+    max-height: calc(100dvh - 160px);
+  }
+  .sfoot {
+    display: none;
+  }
+}
+
+.search-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-height: 500px) {
+  .search,
+  .hud.phone .search.search {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .sres {
+    max-height: none;
+  }
+}

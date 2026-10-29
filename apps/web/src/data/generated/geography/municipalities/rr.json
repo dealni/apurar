@@ -1,0 +1,17 @@
+[
+  {"arcs":[[418,419,420,421]],"type":"Polygon","properties":{"id":"1400027","n":"Amajari","uf":"RR","p":13927}},
+  {"arcs":[[-420,422,423,424,425]],"type":"Polygon","properties":{"id":"1400050","n":"Alto Alegre","uf":"RR","p":21096}},
+  {"arcs":[[-419,426,427,428,429,430,-423]],"type":"Polygon","properties":{"id":"1400100","n":"Boa Vista","uf":"RR","p":413486}},
+  {"arcs":[[-429,431,432,433,434]],"type":"Polygon","properties":{"id":"1400159","n":"Bonfim","uf":"RR","p":13923}},
+  {"arcs":[[-430,-435,435,436,437]],"type":"Polygon","properties":{"id":"1400175","n":"Cantá","uf":"RR","p":18682}},
+  {"arcs":[[-270,438,-436,-434,439,440,441,442,443]],"type":"Polygon","properties":{"id":"1400209","n":"Caracaraí","uf":"RR","p":20957}},
+  {"arcs":[[-417,444,-441,445,446,-389]],"type":"Polygon","properties":{"id":"1400233","n":"Caroebe","uf":"RR","p":10656}},
+  {"arcs":[[-269,447,-425,448,-437,-439]],"type":"Polygon","properties":{"id":"1400282","n":"Iracema","uf":"RR","p":10023}},
+  {"arcs":[[-424,-431,-438,-449]],"type":"Polygon","properties":{"id":"1400308","n":"Mucajaí","uf":"RR","p":18095}},
+  {"arcs":[[-428,449,450,451,-432]],"type":"Polygon","properties":{"id":"1400407","n":"Normandia","uf":"RR","p":13986}},
+  {"arcs":[[-422,452,453,-450,-427]],"type":"Polygon","properties":{"id":"1400456","n":"Pacaraima","uf":"RR","p":19305}},
+  {"arcs":[[-271,-444,454,455,-415,-400,-392]],"type":"Polygon","properties":{"id":"1400472","n":"Rorainópolis","uf":"RR","p":32647}},
+  {"arcs":[[-416,-456,456,-442,-445]],"type":"Polygon","properties":{"id":"1400506","n":"São João da Baliza","uf":"RR","p":8858}},
+  {"arcs":[[-443,-457,-455]],"type":"Polygon","properties":{"id":"1400605","n":"São Luiz do Anauá","uf":"RR","p":7315}},
+  {"arcs":[[-451,-454,457]],"type":"Polygon","properties":{"id":"1400704","n":"Uiramutã","uf":"RR","p":13751}}
+]

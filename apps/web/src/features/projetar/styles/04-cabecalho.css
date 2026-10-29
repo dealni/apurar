@@ -1,0 +1,83 @@
+.hudtop {
+  position: absolute;
+  left: var(--m);
+  right: var(--m);
+  top: 14px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 4;
+  container-type: inline-size;
+}
+.hud.tv .hudtop {
+  z-index: 9;
+}
+@container (max-width:1520px) {
+  .tvb .lbl,
+  .hudtop .sbtn kbd,
+  .live .lt > .lw:last-child {
+    display: none;
+  }
+  .tvb {
+    width: 36px;
+    padding: 0;
+  }
+  .sbtn {
+    padding: 0 14px 0 12px;
+  }
+}
+@container (max-width:1180px) {
+  .brand > span,
+  .live .lw,
+  .tvb .lbl,
+  .sbtn > span,
+  .hudtop .sbtn kbd {
+    display: none;
+  }
+  .tvb {
+    width: 36px;
+    padding: 0;
+  }
+  .sbtn {
+    padding: 0 10px;
+  }
+}
+.live .lt {
+  flex-shrink: 0;
+}
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+.hud:not(.phone):not(.tv) .hudtop {
+  display: grid;
+  grid-template-columns:
+    minmax(max-content, calc(var(--lw, 336px) + 20px))
+    auto 1fr;
+  column-gap: 0;
+}
+.hud:not(.phone):not(.tv) .hudtop > .brand {
+  grid-column: 1;
+  justify-self: start;
+  padding-right: 20px;
+}
+.hud:not(.phone):not(.tv) .hudtop > .switch {
+  grid-column: 2;
+}
+.hud:not(.phone):not(.tv) .hudtop > .status {
+  grid-column: 3;
+  justify-self: end;
+  min-width: auto;
+  margin-left: 0;
+}
+.brand b {
+  font: 400 22px/1 var(--serif);
+  letter-spacing: -0.01em;
+}
+.brand span {
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-3);
+}

@@ -1,0 +1,215 @@
+.toast {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 16px 0 6px;
+  border-radius: 100px;
+  background: #141516f5;
+  border: 1px solid var(--line-2);
+  box-shadow: 0 14px 32px #00000073;
+  transform: translate(-50%);
+  white-space: nowrap;
+  cursor: pointer;
+  animation: toastin 0.42s var(--ease-out) both;
+}
+.toast.out {
+  animation: toastout 0.32s var(--ease) both;
+}
+.toast:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+.toast .avs {
+  display: flex;
+  flex: none;
+}
+.toast .avs .av + .av {
+  margin-left: -8px;
+  box-shadow: 0 0 0 2px #141516f5;
+}
+.toast p {
+  font: 400 var(--t-body)/1 var(--sans);
+  color: var(--fg-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toast p b {
+  font-weight: 500;
+  color: var(--fg);
+}
+.toast time {
+  color: var(--fg-3);
+}
+@keyframes toastin {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+}
+@keyframes toastout {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+}
+.maptop {
+  transition: opacity 0.2s var(--ease);
+}
+.maptop.hush {
+  opacity: 0;
+  pointer-events: none;
+}
+.tl .pin.new:before {
+  animation:
+    pindrop 0.4s var(--ease-out) both,
+    pinpulse 0.9s var(--ease-out) 0.4s;
+}
+@keyframes pindrop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}
+@keyframes pinpulse {
+  40% {
+    transform: scale(1.8);
+  }
+}
+.evover {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  background: #050607cc;
+  animation: fade 0.5s var(--ease) both;
+}
+.evover.out {
+  animation: fade 0.45s var(--ease) reverse both;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+}
+.evcard {
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  animation: enter 0.7s var(--ease-out) both;
+}
+.evover.out .evcard {
+  animation: cardout 0.38s var(--ease) both;
+}
+@keyframes cardout {
+  to {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.985);
+  }
+}
+.evcard .kick {
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-3);
+}
+.evcard .sent {
+  font: 400 46px/1.08 var(--serif);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  min-height: 0;
+}
+.evcard .sent b {
+  font-weight: 400;
+}
+.evcard .evsub {
+  font: 400 var(--t-name)/1.4 var(--sans);
+  color: var(--fg-2);
+  margin-top: 10px;
+}
+.evcard .leader .fig {
+  font-size: 64px;
+}
+.evcard .leaders {
+  grid-template-columns: minmax(0, 1fr) 340px minmax(0, 1fr);
+  align-items: end;
+}
+.evcard .evplot {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+}
+.ticker {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.tklab {
+  flex: none;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 18px;
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--bg);
+  background: var(--fg);
+}
+.tkwin {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 32px,
+    #000 calc(100% - 32px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 32px,
+    #000 calc(100% - 32px),
+    transparent
+  );
+}
+.tktrack {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.tk {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: 400 var(--t-name)/1 var(--sans);
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+.tk:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--fg-4);
+  margin: 0 26px;
+}
+.tk b {
+  font-weight: 500;
+  color: var(--fg);
+}
+.tk time {
+  font: 500 var(--t-label)/1 var(--sans);
+  color: var(--fg-3);
+  font-variant-numeric: tabular-nums;
+}

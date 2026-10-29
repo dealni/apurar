@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "origin_capture": "/Users/dealni/Developer/output/revisao-apurar-producao-nova-2026-10-25/api",
+  "release": {
+    "git_sha": "554666c9be12b5e3ac3cd9e59defbe08b8cf8ae3",
+    "collector_tree": "1ea7e19c9b6f67bc0bf495084f3aa9e72439a410",
+    "lock_sha256": "c7f9d6798ee5c9a45eba87b834904859c14113fee084531fda246ac8b5153d14",
+    "timing": {
+      "liveSeconds": 15,
+      "collectingSeconds": 2,
+      "finishedSeconds": 300,
+      "blockSeconds": 600,
+      "missingSeconds": 600,
+      "trackingSweepSeconds": 45,
+      "hiddenSeconds": 60,
+      "requestTimeoutSeconds": 10,
+      "healthStaleSeconds": 120,
+      "sourceQuietSeconds": 120,
+      "cacheSeconds": 10,
+      "errorSeconds": 30,
+      "sourceTimeoutSeconds": 12
+    },
+    "collector_git_sha": "554666c9be12b5e3ac3cd9e59defbe08b8cf8ae3",
+    "built_at": "2026-10-25T09:23:05.550571+00:00",
+    "worker": "apurar"
+  },
+  "election": "6258",
+  "source_url": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json",
+  "objects": {
+    "manifest": {
+      "file": "manifest.body",
+      "storage": "fixture",
+      "url": "https://apurar.app/api/manifest",
+      "captured_at": "2026-10-25T09:34:59.725598+00:00",
+      "sha256": "59f3e8be0a4064c857f2a53a794718c5988c2c5806a94e5f86494c59ec1da4bb",
+      "bytes": 852
+    },
+    "snapshots": {
+      "file": "snapshots.body",
+      "storage": "fixture",
+      "url": "https://apurar.app/api/snapshots/2a8d212127cd06da7bc42c35beb0d59990e370f4332250bf895e0b4e9eb4265a",
+      "captured_at": "2026-10-25T09:34:59.790459+00:00",
+      "sha256": "2a8d212127cd06da7bc42c35beb0d59990e370f4332250bf895e0b4e9eb4265a",
+      "bytes": 2343
+    },
+    "history": {
+      "file": "history.body",
+      "storage": "fixture",
+      "url": "https://apurar.app/api/history/c717cba81e18ae03d83d1cebb5107535172687f4b3f40ae2a7d1de1c36aaa43e",
+      "captured_at": "2026-10-25T09:35:00.295806+00:00",
+      "sha256": "c717cba81e18ae03d83d1cebb5107535172687f4b3f40ae2a7d1de1c36aaa43e",
+      "bytes": 4757
+    },
+    "municipalities": {
+      "file": "municipalities.body",
+      "storage": "packed",
+      "url": "https://apurar.app/api/municipalities/1c637ee1328fa1ed9acb86d3a01456108f5b5ec95fa038bf1e46e0f134842abe",
+      "captured_at": "2026-10-25T09:35:00.212359+00:00",
+      "sha256": "1c637ee1328fa1ed9acb86d3a01456108f5b5ec95fa038bf1e46e0f134842abe",
+      "bytes": 2550643
+    },
+    "supplemental": {
+      "file": "supplemental.body",
+      "storage": "packed",
+      "url": "https://apurar.app/api/supplemental",
+      "captured_at": "2026-10-25T09:35:01.090543+00:00",
+      "sha256": "b2adca4df7d3ad4d2236b0fcab5a3a1a1e27256cf86d868ebbc7a8b5d18a5f4b",
+      "bytes": 569064
+    },
+    "archive": {
+      "file": "archive.body",
+      "storage": "packed",
+      "url": "https://apurar.app/api/archive",
+      "captured_at": "2026-10-25T09:35:01.895179+00:00",
+      "sha256": "da5a591203777ae695c1ac4f42f7e1b045d46cff1abaa5d0ae9f4aaa8e1a5376",
+      "bytes": 35671
+    }
+  },
+  "limits": [
+    "Quatro observações de pré-apuração real, todas no mesmo horário da fonte: 2026-10-24T19:19:13-03:00.",
+    "Votos e seções contados são zero; as revisões alteram metadados e disponibilidade da projeção. Não é trajetória com apuração.",
+    "Não comprova crescimento de votos, alternância de líder, correção de contagens, resultado final ou replay de observações temporais distintas.",
+    "Os corpos são cópias exatas de capturas existentes; não houve nova consulta nem alteração na produção."
+  ]
+}
